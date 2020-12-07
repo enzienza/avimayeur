@@ -1,0 +1,40 @@
+// main: ../style.scss
+
+.hero{
+  height: 100vh;
+  @include bg-paralax-degrader('asset/images/table-bouddha-bar.jpg');
+
+  .jumbtitle{
+    text-align: center;
+
+    .logo{
+      width: 14em;
+      height: auto;
+      -webkit-box-align:center;
+      -ms-flex-align:center;
+      align-items:center;
+      padding-top: 11em;
+    }
+
+    h1{
+      font-size: 5em;
+      color: #FAFAFA;
+    }
+  }
+
+
+  @include responsive(XS){
+    height: calc(100vh - 10vh);
+
+    .jumbtitle{
+      /* border: 3px solid lime; */
+      .logo{
+        width: calc(100% / 3);
+      }
+      h1{
+        /* font-size: 2em; */
+        font-size: calc(5em / 2);
+      }
+    }
+  }
+}

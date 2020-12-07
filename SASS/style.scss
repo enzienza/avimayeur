@@ -1,0 +1,50 @@
+/*!
+Theme Name: A Vi Mayeur
+Theme URI:
+Author: Enza Lombardo
+Author URI: http://www.enzalombardo.be
+Description: Template pour le restaurant Au Vi Mayeur
+Version: 1.0
+Text Domain: avimayeur
+copyright : Enza ©2020
+Tags:
+*/
+
+
+// VENDOR -------------------------------
+@import "vendor/bootstrap";
+
+
+// UTILITIES ----------------------------
+//@import 'utilities/mixins';
+@import 'utilities/variables';
+
+
+// BASE ---------------------------------
+@import 'base/minireset';
+//@import 'base/general';
+
+
+// COMPONENTS ---------------------------
+//@import 'components/card'
+//@import 'components/menu';
+//@import 'components/tabs';
+
+
+// ELEMENTS -----------------------------
+//@import 'elements/box';
+//@import 'elements/button';
+//@import 'elements/icon';
+//@import 'elements/table';
+//@import 'elements/title';
+
+// FORM ---------------------------------
+//@import 'form/checked';
+//@import 'form/text';
+//@import 'form/select';
+
+
+// LAYOUT -------------------------------
+//@import 'layout/hero';
+//@import 'layout/footer';
+//@import 'layout/section';

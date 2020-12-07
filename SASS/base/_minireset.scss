@@ -1,0 +1,29 @@
+// main: ../style.scss
+
+*{
+  margin: 0;
+  padding: 0;
+  &,
+  &::before,
+  &::after{
+    webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+}
+
+ul{
+  list-style: none;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  &:hover{
+    color: inherit;
+    text-decoration: none;
+  }
+}

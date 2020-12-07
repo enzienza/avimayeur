@@ -18,6 +18,52 @@ wp-content/themes/twenty*/
 node_modules/
 
 # ignore log files and databases
-*.log
-*.sql
-*.sqlite
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/mu-plugins/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+
+/.DS_Store
+# directory "assets"
+/assets/.DS_Store
+/assets/css/.DS_Store
+/assets/fonts/.DS_Store
+/assets/img/.DS_Store
+/assets/js/.DS_Store
+/assets/plugins/.DS_Store
+
+# directory "inc"
+/inc/.DS_Store
+/inc/customize/.DS_Store
+/inc/metaboxes/.DS_Store
+/inc/options-theme/.DS_Store
+/inc/post-type/.DS_Store
+/inc/taxonomys/.DS_Store
+
+# directory "parts"
+/parts/.DS_Store
+
+
+/SASS/.DS_Store
+/SASS/base/.DS_Store
+/SASS/components/.DS_Store
+/SASS/elements/.DS_Store
+/SASS/form/.DS_Store
+/SASS/layout/.DS_Store
+/SASS/utilities/.DS_Store
+/SASS/utilities/mixins/.DS_Store
+/SASS/vendor/.DS_Store
+/SASS/vendor/bootstrap/.DS_Store
