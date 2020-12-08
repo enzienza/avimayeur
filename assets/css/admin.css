@@ -22,64 +22,62 @@ Tags:
 */
 
 
-
-
-
 /* ----------------------------------------------
  * 1 - Style for the login page
  */
-body.login{
-  background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-              url('../img/table-bouddha-bar.jpg') no-repeat fixed;
-  background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-              url('../img/table-bouddha-bar.jpg') no-repeat fixed;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-              url('../img/table-bouddha-bar.jpg') no-repeat fixed;
-  background-size: cover;
-  background-position: 50% 50%;
-  height: 100vh;
+body.login {
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url('../img/table-bouddha-bar.jpg') no-repeat fixed;
+    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url('../img/table-bouddha-bar.jpg') no-repeat fixed;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url('../img/table-bouddha-bar.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
 }
 
-#pearlIt{
-  background-color: inherit;
-  box-shadow: none;
+#pearlIt {
+    background-color: inherit;
+    box-shadow: none;
 }
 
-.login form{
-  border: none;
+.login form {
+    border: none;
 }
 
-#login #nav a, #login #backtoblog a{
-  color: white;
-  display: block;
-  background: gray;
-  padding: 10px;
-  box-shadow: 1px 1px 1px 4px rgba(85, 85, 85, 0.7);
+#login #nav a, #login #backtoblog a {
+    color: white;
+    display: block;
+    background: gray;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 4px rgba(85, 85, 85, 0.7);
 }
 
-h1 a{
-  background: url('../img/logo-login.png') no-repeat !important;
-  width: 257px !important;
-  height: 198px !important;
+h1 a {
+    background: url('../img/logo-login.png') no-repeat !important;
+    width: 257px !important;
+    height: 198px !important;
 }
 
 /* ----------------------------------------------
  * 2 - style for columns Admin of CPT
  */
- .column-cd{
-   padding: 11px 0 0 3px;
-   width: 2.2em;
-   vertical-align: top;
- }
+.column-cd {
+    padding: 11px 0 0 3px;
+    width: 2.2em;
+    vertical-align: top;
+}
 
- .column-icon {
-   width: 50px;
-   text-align: center;
-   vertical-align: middle !important;
- }
- .column-icon .icon{
-   font-size: 36px;
- }
+.column-icon {
+    width: 50px;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.column-icon .icon {
+    font-size: 36px;
+}
 
 
 /* .post-type-cartes .editor-block-list__layout.block-editor-block-list__layout{
@@ -96,60 +94,60 @@ h1 a{
  *  - style for metabox reapeatable
  */
 
- /* .button.remove-row{
-     padding: 0 15px;
-     border-radius: 15px;
-     font-size: large;
-     border-radius: 30%;
-     background: none;
-     border: 1px solid #7e8993;
-     color: #7e8993;
- }
+/* .button.remove-row{
+    padding: 0 15px;
+    border-radius: 15px;
+    font-size: large;
+    border-radius: 30%;
+    background: none;
+    border: 1px solid #7e8993;
+    color: #7e8993;
+}
 
 
- .button.remove-row:hover{
-     background: red;
-     color: #fff;
- }
+.button.remove-row:hover{
+    background: red;
+    color: #fff;
+}
 
- .button.add-row:hover{
-     background: green;
-     color: #fff;
- }
+.button.add-row:hover{
+    background: green;
+    color: #fff;
+}
 
- .button.btn-save.button-large:hover{
-     background: #008ec2;
-     border-color: #006799;
-     color: #fff;
- } */
+.button.btn-save.button-large:hover{
+    background: #008ec2;
+    border-color: #006799;
+    color: #fff;
+} */
 
 /* ----------------------------------------------
  *  - style for ALL administatrion
  */
- input[type="color"],
- input[type="date"],
- input[type="datetime-local"],
- input[type="datetime"],
- input[type="email"],
- input[type="month"],
- input[type="number"],
- input[type="password"],
- input[type="search"],
- input[type="tel"],
- input[type="text"],
- input[type="time"],
- input[type="url"],
- input[type="week"],
- select, textarea {
-     box-shadow: 0 0 0 transparent;
-     border-radius: 4px;
-     border: 1px solid #7e8993;
-     background: #fff;
-     color: #32373c;
- }
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select, textarea {
+    box-shadow: 0 0 0 transparent;
+    border-radius: 4px;
+    border: 1px solid #7e8993;
+    background: #fff;
+    color: #32373c;
+}
 
-.wp-admin{
-  background: #f1f1f1;
+.wp-admin {
+    background: #f1f1f1;
 }
 
 /* .postbox .inside h2,
@@ -158,33 +156,35 @@ h1 a{
 .wrap > h2:first-child{
   font-size: 2em;
 } */
-.wrap .wp-heagin-inline{
-  font-size: 2em;
+.wrap .wp-heagin-inline {
+    font-size: 2em;
 }
 
-form h2{
-  padding-top: 1.5em;
-  border-top: 1px solid #cecece;
-  width: 98%;
-  font-size: 1.3em;
+form h2 {
+    padding-top: 1.5em;
+    border-top: 1px solid #cecece;
+    width: 98%;
+    font-size: 1.3em;
 }
 
-.img-hero{
-  width: 300px;
-  height: auto;
+.img-hero {
+    width: 300px;
+    height: auto;
 }
+
 /* ----------------------------------------------
  *  - style for the generality page
  */
 
 
-.form-generality .img-logo{
-  width:100px;
-  height:auto;
+.form-generality .img-logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 1em;
 }
 
-.description{
-  color: #cecece;
+.description {
+    color: #cecece;
 }
 
 
@@ -198,76 +198,76 @@ form h2{
   width: 98%;
 } */
 
-.form-timetable .form-table{
-  width: 50%;
+.form-timetable .form-table {
+    width: 50%;
 }
 
 .form-timetable tr {
-  border-bottom: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
 }
 
-.form-timetable tr:last-child{
-  border-bottom: none;
+.form-timetable tr:last-child {
+    border-bottom: none;
 }
 
-.space{
-  margin: 0 1em;
+.space {
+    margin: 0 1em;
 }
 
-.form-timetable input[type="time"]{
-  width: 6em;
-  text-align: center;
+.form-timetable input[type="time"] {
+    width: 6em;
+    text-align: center;
 }
 
-.form-timetable input[type="checkbox"]{
-  margin: 1em !important;
+.form-timetable input[type="checkbox"] {
+    margin: 1em !important;
 }
 
 /* ----------------------------------------------
  *  - Style for the customtheme page
  */
 
-.importers{
-  margin-top: 2.5em;
+.importers {
+    margin-top: 2.5em;
 }
 
-.importers .import-system{
-  width: 130px;
-  font-weight: bolder;
+.importers .import-system {
+    width: 130px;
+    font-weight: bolder;
 }
 
-.importers td.desc{
-  width: 400px;
+.importers td.desc {
+    width: 400px;
 }
 
-.height-space{
-  padding: .5em 0;
+.height-space {
+    padding: .5em 0;
 }
 
 /* ----------------------------------------------
  *  - Style for the errorpage
  */
 .form-errorpage .submit {
-  margin-top: 4em;
+    margin-top: 4em;
 }
 
-.form-errorpage h2{
-  border: none;
+.form-errorpage h2 {
+    border: none;
 }
 
-.img-template-error{
-  display: inline-block;
+.img-template-error {
+    display: inline-block;
 }
 
-.img-template-error .img-hero{
-  position: relative;
-  width: 350px;
+.img-template-error .img-hero {
+    position: relative;
+    width: 350px;
 }
 
-.form-errorpage .form-table{
-  margin-right: 2em;
-  width: 65%;
-  float: right;
+.form-errorpage .form-table {
+    margin-right: 2em;
+    width: 65%;
+    float: right;
 }
 
 .form-errorpage .form-table th {

@@ -22,11 +22,11 @@
  *  1 - CUSTOMIZE
  */
 /* customize theme */
-//require_once ('inc/customize/config-theme.php');
+require_once ('inc/customize/config.php');
 
 /* customize back-end */
-//require_once ('inc/customize/config-admin.php');
-//require_once ('inc/customize/custom-dashboard.php');
+require_once ('inc/customize/config-admin.php');
+require_once ('inc/customize/custom-dashboard.php');
 
 /* customize columns */
 
@@ -42,6 +42,7 @@
 /** =====================================================
  *  3 - OPTIONS-THEME
  */
+require_once ('inc/options-theme/generality.php');
 
 
 /** =====================================================

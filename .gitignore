@@ -41,6 +41,8 @@ wp-content/plugins/hello.php
 /assets/.DS_Store
 /assets/css/.DS_Store
 /assets/fonts/.DS_Store
+/assets/fonts/philisopher/.DS_Store
+/assets/fonts/poppins/.DS_Store
 /assets/img/.DS_Store
 /assets/js/.DS_Store
 /assets/plugins/.DS_Store

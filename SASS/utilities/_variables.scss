@@ -4,19 +4,16 @@
 /* ------------------------------------------------------------ */
 /* COLOR */
 /* ------------------------------------------------------------ */
-$color-primary: fuchsia;
-//$color-primary-light:
-//$color-primary-dark:
+$color-primary: #F5A623;
+$color-primary-light: lighten($color-primary, 20%);
+$color-primary-dark: darken($color-primary, 20%);
 
-$color-secondary: lime;
-//$color-secondary-light:
-//$color-secondary-dark:
-
-//$color-grey:
+$color-grey: #919191;
 //$color-grey-light:
 //$color-grey-dark:
 
 $color-dark: #333;
+
 
 $color-light: #fafafa;
 
@@ -24,9 +21,14 @@ $color-light: #fafafa;
 /* ------------------------------------------------------------ */
 /* TYPOGRAPHIE */
 /* ------------------------------------------------------------ */
-//$font-primary:
-//$font-secondary:
+$font-primary: 'poppins';
+$font-primary-bold:'poppins-bold';
+$font-primary-light:'poppins-light';
+$font-primary-medium:'poppins-medium';
+$font-primary-thin:'poppins-thin';
 
+$font-secondary: 'philosopher';
+$font-secondary-bold: 'philosopher-bold';
 
 /* ------------------------------------------------------------ */
 /* BREAKPOINT - Responsive widths */

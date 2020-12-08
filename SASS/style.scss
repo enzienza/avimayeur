@@ -22,6 +22,7 @@ Tags:
 
 // BASE ---------------------------------
 @import 'base/minireset';
+@import "base/fonts";
 //@import 'base/general';
 
 
@@ -46,5 +47,5 @@ Tags:
 
 // LAYOUT -------------------------------
 //@import 'layout/hero';
-//@import 'layout/footer';
+@import 'layout/footer';
 //@import 'layout/section';
