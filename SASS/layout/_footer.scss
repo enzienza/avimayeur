@@ -1,1 +1,40 @@
 // main: ../style.scss
+
+footer{
+  background: $color-dark;
+  color: $color-grey;
+  height: 3em;
+  text-align: center;
+  padding: 10px 0;
+  line-height: 2;
+  font-size: small;
+  a{
+    color: $color-primary;
+    &:hover{
+      color: $color-primary-light;
+    }
+  }
+}
+
+
+//@include responsive(MD){
+//  .footer-info{
+//    // block location
+//    .logo{
+//      width: 50px;
+//    }
+//    .blog-address{
+//      margin-left: 1.2em;
+//      font-size: .9em;
+//    }
+//    .title{
+//      font-size: 1.3em;
+//    }
+//
+//    // block link
+//    .navbar-nav{
+//      margin-left: 4em;
+//    }
+//
+//  }
+//}

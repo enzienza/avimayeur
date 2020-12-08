@@ -19,11 +19,20 @@
 
 <footer class="footer text-center">
     <div class="container">
+
         <small class="copyright">
-            <?php bloginfo('name')?>© 2020 |
-            Designed by
-            <a href="#" target="_blank">Enza Lombardo©</a>
+            <div class="float-left">
+                <a href="#" class="">Privacy Policy</a>
+            </div>
+
+            <div class="float-right">
+                © <?php bloginfo('name')?> 2020.
+                All Rights Reserved.
+                Designed by
+                <a href="http://enzalombardo.be/" target="_blank">Enza Lombardo</a>.
+            </div>
         </small>
+
     </div><!--//container-->
 </footer><!--//footer-->
 
