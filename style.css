@@ -4730,6 +4730,55 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+/**
+ * BOX-SIZING
+ * @type {[type]}
+ */
+/**
+ * DISPLAY : FLEX
+ */
+/**
+ * DISPLAY : FLEX
+ */
+/**
+ * JUSTIFY-CONTENT
+ *
+ * Description :
+ * La propriété justify-content définit l'alignement le long de l'axe principal.
+ * Elle permet de distribuer l'espace excédentaire lorsque tous les items flex
+ * sur une ligne sont inflexibles ou lorsqu'ils ont atteint leur taille maximale.
+ * Elle contrôle aussi l'alignement des items lorsqu'ils débordent.
+ *
+ * @type {[flex-start | flex-end | center | space-between | space-around]}
+ */
+/*
+ * ALIGN-ITEMS
+ *
+ * Description :
+ * La propriété align-items définit la façon dont les items d'une ligne sont
+ * disposés le long de l'axe "cross". On peut le voir comme la version de j
+ * ustify-content pour "cross axis".
+ *
+ * @type {[flex-start | flex-end | center | baseline | stretch]}
+ */
+/*
+ * ALIGN-CONTENT
+ *
+ * Description :
+ * La propriété align-content aligne les lignes d'un container flex à
+ * l'intérieur de l'espace où il reste de l'espace sur l'axe cross,
+ * un peu comme justify-content aligne les items sur l'axe principal.
+ *
+ * @type {(flex-start | flex-end | center | space-between | space-around | stretch)}
+ */
+/*
+ * ALIGN-CONTENT
+ *
+ * Description :
+ *
+
+ * @type {(nowrap | wrap | wrap-reverse)}
+ */
 /* ------------------------------------------------------------ */
 /* COLOR */
 /* ------------------------------------------------------------ */
@@ -4798,6 +4847,87 @@ a {
   src: url("assets/fonts/philosopher/philosopher-bold-webfont.woff2") format("woff2"), url("assets/fonts/philosopher/philosopher-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: "Flaticon";
+  src: url("assets/fonts/flaticon/Flaticon.eot");
+  src: url("assets/fonts/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"), url("assets/fonts/flaticon/Flaticon.woff2") format("woff2"), url("assets/fonts/flaticon/Flaticon.woff") format("woff"), url("assets/fonts/flaticon/Flaticon.ttf") format("truetype"), url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg"); } }
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-style: normal; }
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.flaticon-instagram:before {
+  content: "\f100"; }
+
+.flaticon-heart:before {
+  content: "\f101"; }
+
+.flaticon-facebook:before {
+  content: "\f102"; }
+
+.flaticon-whatsapp:before {
+  content: "\f103"; }
+
+.flaticon-twitter:before {
+  content: "\f104"; }
+
+.flaticon-linkedin:before {
+  content: "\f105"; }
+
+.flaticon-pin:before {
+  content: "\f106"; }
+
+.flaticon-messenger:before {
+  content: "\f107"; }
+
+.flaticon-worldwide:before {
+  content: "\f108"; }
+
+.flaticon-email:before {
+  content: "\f109"; }
+
+.table-horaire {
+  font-size: smaller;
+  width: 75%; }
+  .table-horaire .item-days {
+    border-bottom: 1px solid #4d4d4d;
+    height: 50px; }
+    .table-horaire .item-days:last-child {
+      border: none; }
+  .table-horaire .day {
+    padding-left: 2em; }
+  .table-horaire .hour-list {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0; }
+  .table-horaire .hour-item {
+    padding: 0 .5em; }
+
 footer {
   background: #333;
   color: #919191;
@@ -4805,10 +4935,105 @@ footer {
   text-align: center;
   padding: 10px 0;
   line-height: 2;
-  font-size: small; }
+  font-size: small;
+  border-top: 1px solid #4d4d4d; }
   footer a {
-    color: #F5A623; }
+    color: #7b7b7b; }
     footer a:hover {
-      color: #f9cd85; }
+      color: #f7ba54; }
+
+.filter {
+  height: 90vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: -webkit-radial-gradient(circle, rgba(0, 0, 0, 0.2), black);
+  background-image: -o-radial-gradient(circle, rgba(0, 0, 0, 0.2), black);
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.2), black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.hero {
+  height: 90vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .hero .jumb-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .hero .jumb-hero .logo {
+      /*width: 14em;*/
+      width: 25%;
+      height: auto; }
+
+.info {
+  background: #333;
+  color: #919191;
+  margin-bottom: 0; }
+
+.block-contact, .block-horaire {
+  margin-top: 3em;
+  font-family: "poppins-light"; }
+
+.block-contact, .block-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.block-horaire {
+  margin-bottom: 2em; }
+
+.contacting .title {
+  font-size: x-large;
+  font-family: "philosopher";
+  font-weight: bold;
+  line-height: 2; }
+.contacting .location {
+  width: 150px; }
+.contacting p {
+  margin-bottom: 0; }
+.contacting .phone {
+  line-height: 3;
+  font-size: smaller; }
+
+.social-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 0; }
+.social-item {
+  padding: 0 .5em; }
+  .social-item:first-child {
+    padding-right: 2px; }
+  .social-item .icons:hover {
+    color: #f7ba54; }
+
+.block-logo .logo {
+  width: 14em;
+  height: auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,12 +26,13 @@ Tags:
  * 1 - Style for the login page
  */
 body.login {
-    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-    url('../img/table-bouddha-bar.jpg') no-repeat fixed;
-    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-    url('../img/table-bouddha-bar.jpg') no-repeat fixed;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-    url('../img/table-bouddha-bar.jpg') no-repeat fixed;
+    /*background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),*/
+    /*url('../img/table-bouddha-bar.jpg') no-repeat fixed;*/
+    /*background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),*/
+    /*url('../img/table-bouddha-bar.jpg') no-repeat fixed;*/
+    /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),*/
+    /*url('../img/table-bouddha-bar.jpg') no-repeat fixed;*/
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     background-size: cover;
     background-position: 50% 50%;
     height: 100vh;
@@ -55,7 +56,7 @@ body.login {
 }
 
 h1 a {
-    background: url('../img/logo-login.png') no-repeat !important;
+    /*background: url('../img/logo-login.png') no-repeat !important;*/
     width: 257px !important;
     height: 198px !important;
 }
@@ -200,7 +201,6 @@ form h2 {
 
 .form-timetable .form-table {
     width: 50%;
-<<<<<<< HEAD
 }
 
 .form-timetable th{
@@ -225,16 +225,18 @@ td .service:first-child{
     width: 160px;
 }
 
-.form-timetable .service-ok input[type="checkbox"]{
+.form-timetable .service-ok input[type="checkbox"],
+.form-timetable .service-close input[type="checkbox"]{
     margin: .5em !important;
 }
 
-.form-timetable .service-de label, .form-timetable .service-a label{
+.form-timetable .service-de label,
+.form-timetable .service-a label{
     margin: 0 .5em;
-=======
->>>>>>> main
 }
-
+.form-timetable .service-close{
+    margin-top: .5em;
+}
 .form-timetable tr {
     border-bottom: 1px solid #cecece;
 }

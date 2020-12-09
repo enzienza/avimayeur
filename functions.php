@@ -43,10 +43,7 @@ require_once ('inc/customize/custom-dashboard.php');
  *  3 - OPTIONS-THEME
  */
 require_once ('inc/options-theme/generality.php');
-<<<<<<< HEAD
 require_once ('inc/options-theme/horaire.php');
-=======
->>>>>>> main
 
 
 /** =====================================================

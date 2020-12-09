@@ -165,6 +165,7 @@ class avimayeur_timetable
         register_setting(self::SUB_GROUP, 'lundi_soir_open');
         register_setting(self::SUB_GROUP, 'lundi_soir_de');
         register_setting(self::SUB_GROUP, 'lundi_soir_a');
+        register_setting(self::SUB_GROUP, 'lundi_closed');
 
         /* MARDI */
         register_setting(self::SUB_GROUP, 'mardi_midi_open');
@@ -173,6 +174,7 @@ class avimayeur_timetable
         register_setting(self::SUB_GROUP, 'mardi_soir_open');
         register_setting(self::SUB_GROUP, 'mardi_soir_de');
         register_setting(self::SUB_GROUP, 'mardi_soir_a');
+        register_setting(self::SUB_GROUP, 'mardi_closed');
 
         /* MERCREDI */
         register_setting(self::SUB_GROUP, 'mercredi_midi_open');
@@ -181,6 +183,7 @@ class avimayeur_timetable
         register_setting(self::SUB_GROUP, 'mercredi_soir_open');
         register_setting(self::SUB_GROUP, 'mercredi_soir_de');
         register_setting(self::SUB_GROUP, 'mercredi_soir_a');
+        register_setting(self::SUB_GROUP, 'mercredi_closed');
 
         /* JEUDI */
         register_setting(self::SUB_GROUP, 'jeudi_midi_open');
@@ -189,6 +192,7 @@ class avimayeur_timetable
         register_setting(self::SUB_GROUP, 'jeudi_soir_open');
         register_setting(self::SUB_GROUP, 'jeudi_soir_de');
         register_setting(self::SUB_GROUP, 'jeudi_soir_a');
+        register_setting(self::SUB_GROUP, 'jeudi_closed');
         
         /* VENDREDI */
         register_setting(self::SUB_GROUP, 'vendredi_midi_open');
@@ -197,6 +201,7 @@ class avimayeur_timetable
         register_setting(self::SUB_GROUP, 'vendredi_soir_open');
         register_setting(self::SUB_GROUP, 'vendredi_soir_de');
         register_setting(self::SUB_GROUP, 'vendredi_soir_a');
+        register_setting(self::SUB_GROUP, 'vendredi_closed');
         
         /* SAMEDI */
         register_setting(self::SUB_GROUP, 'samedi_midi_open');
@@ -205,6 +210,7 @@ class avimayeur_timetable
         register_setting(self::SUB_GROUP, 'samedi_soir_open');
         register_setting(self::SUB_GROUP, 'samedi_soir_de');
         register_setting(self::SUB_GROUP, 'samedi_soir_a');
+        register_setting(self::SUB_GROUP, 'samedi_closed');
         
         /* DIMANCHE */
         register_setting(self::SUB_GROUP, 'dimanche_midi_open');
@@ -213,6 +219,7 @@ class avimayeur_timetable
         register_setting(self::SUB_GROUP, 'dimanche_soir_open');
         register_setting(self::SUB_GROUP, 'dimanche_soir_de');
         register_setting(self::SUB_GROUP, 'dimanche_soir_a');
+        register_setting(self::SUB_GROUP, 'dimanche_closed');
         
     }
 
@@ -242,6 +249,7 @@ class avimayeur_timetable
         $lundi_soir_open = esc_attr(get_option('lundi_soir_open'));
         $lundi_soir_de   = esc_attr(get_option('lundi_soir_de'));
         $lundi_soir_a    = esc_attr(get_option('lundi_soir_a'));
+        $lundi_closed    = esc_attr(get_option('lundi_closed'));
         ?>
             <div class="service">
                 <span class="service-ok">
@@ -299,6 +307,17 @@ class avimayeur_timetable
                             />
                     </span><!--service-a-->
             </div>
+            <div class="service-close">
+                <span class="">
+                    <input type="checkbox"
+                           id="lundi_closed"
+                           name="lundi_closed"
+                           value="1"
+                           <?php checked(1, $lundi_closed, true) ?>
+                    />
+                    <label for="">Jour de fermeture</label>
+                </span>
+            </div>
         <?php
     }
     public static function field_heure_mardi(){
@@ -308,6 +327,7 @@ class avimayeur_timetable
         $mardi_soir_open = esc_attr(get_option('mardi_soir_open'));
         $mardi_soir_de   = esc_attr(get_option('mardi_soir_de'));
         $mardi_soir_a    = esc_attr(get_option('mardi_soir_a'));
+        $mardi_closed    = esc_attr(get_option('mardi_closed'));
         ?>
         <div class="service">
                 <span class="service-ok">
@@ -365,6 +385,17 @@ class avimayeur_timetable
                             />
                     </span><!--service-a-->
         </div>
+        <div class="service-close">
+                <span class="">
+                    <input type="checkbox"
+                           id="mardi_closed"
+                           name="mardi_closed"
+                           value="1"
+                           <?php checked(1, $mardi_closed, true) ?>
+                    />
+                    <label for="">Jour de fermeture</label>
+                </span>
+        </div>
         <?php
     }
 
@@ -375,6 +406,7 @@ class avimayeur_timetable
         $mercredi_soir_open = esc_attr(get_option('mercredi_soir_open'));
         $mercredi_soir_de   = esc_attr(get_option('mercredi_soir_de'));
         $mercredi_soir_a    = esc_attr(get_option('mercredi_soir_a'));
+        $mercredi_closed    = esc_attr(get_option('mercredi_closed'));
         ?>
         <div class="service">
                 <span class="service-ok">
@@ -432,6 +464,17 @@ class avimayeur_timetable
                             />
                     </span><!--service-a-->
         </div>
+        <div class="service-close">
+                <span class="">
+                    <input type="checkbox"
+                           id="mercredi_closed"
+                           name="mercredi_closed"
+                           value="1"
+                           <?php checked(1, $mercredi_closed, true) ?>
+                    />
+                    <label for="">Jour de fermeture</label>
+                </span>
+        </div>
         <?php
     }
 
@@ -442,6 +485,7 @@ class avimayeur_timetable
         $jeudi_soir_open = esc_attr(get_option('jeudi_soir_open'));
         $jeudi_soir_de   = esc_attr(get_option('jeudi_soir_de'));
         $jeudi_soir_a    = esc_attr(get_option('jeudi_soir_a'));
+        $jeudi_closed    = esc_attr(get_option('jeudi_closed'));
         ?>
         <div class="service">
                 <span class="service-ok">
@@ -499,6 +543,17 @@ class avimayeur_timetable
                     />
             </span><!--service-a-->
         </div>
+        <div class="service-close">
+                <span class="">
+                    <input type="checkbox"
+                           id="jeudi_closed"
+                           name="jeudi_closed"
+                           value="1"
+                           <?php checked(1, $jeudi_closed, true) ?>
+                    />
+                    <label for="">Jour de fermeture</label>
+                </span>
+        </div>
         <?php
     }
 
@@ -509,6 +564,7 @@ class avimayeur_timetable
         $vendredi_soir_open = esc_attr(get_option('vendredi_soir_open'));
         $vendredi_soir_de   = esc_attr(get_option('vendredi_soir_de'));
         $vendredi_soir_a    = esc_attr(get_option('vendredi_soir_a'));
+        $vendredi_closed    = esc_attr(get_option('vendredi_closed'));
         ?>
         <div class="service">
                 <span class="service-ok">
@@ -566,6 +622,17 @@ class avimayeur_timetable
                     />
             </span><!--service-a-->
         </div>
+        <div class="service-close">
+                <span class="">
+                    <input type="checkbox"
+                           id="vendredi_closed"
+                           name="vendredi_closed"
+                           value="1"
+                           <?php checked(1, $vendredi_closed, true) ?>
+                    />
+                    <label for="">Jour de fermeture</label>
+                </span>
+        </div>
         <?php
     }
 
@@ -576,6 +643,7 @@ class avimayeur_timetable
         $samedi_soir_open = esc_attr(get_option('samedi_soir_open'));
         $samedi_soir_de   = esc_attr(get_option('samedi_soir_de'));
         $samedi_soir_a    = esc_attr(get_option('samedi_soir_a'));
+        $samedi_closed    = esc_attr(get_option('samedi_closed'));
         ?>
         <div class="service">
                 <span class="service-ok">
@@ -633,6 +701,17 @@ class avimayeur_timetable
                     />
             </span><!--service-a-->
         </div>
+        <div class="service-close">
+                <span class="">
+                    <input type="checkbox"
+                           id="samedi_closed"
+                           name="samedi_closed"
+                           value="1"
+                           <?php checked(1, $samedi_closed, true) ?>
+                    />
+                    <label for="">Jour de fermeture</label>
+                </span>
+        </div>
         <?php
     }
 
@@ -643,6 +722,7 @@ class avimayeur_timetable
         $dimanche_soir_open = esc_attr(get_option('dimanche_soir_open'));
         $dimanche_soir_de   = esc_attr(get_option('dimanche_soir_de'));
         $dimanche_soir_a    = esc_attr(get_option('dimanche_soir_a'));
+        $dimanche_closed    = esc_attr(get_option('dimanche_closed'));
         ?>
         <div class="service">
                 <span class="service-ok">
@@ -699,6 +779,17 @@ class avimayeur_timetable
                            value="<?php echo $dimanche_soir_a ?>"
                     />
             </span><!--service-a-->
+        </div>
+        <div class="service-close">
+                <span class="">
+                    <input type="checkbox"
+                           id="dimanche_closed"
+                           name="dimanche_closed"
+                           value="1"
+                           <?php checked(1, $dimanche_closed, true) ?>
+                    />
+                    <label for="">Jour de fermeture</label>
+                </span>
         </div>
         <?php
     }

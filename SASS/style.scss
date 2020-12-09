@@ -16,7 +16,7 @@ Tags:
 
 
 // UTILITIES ----------------------------
-//@import 'utilities/mixins';
+@import 'utilities/mixins';
 @import 'utilities/variables';
 
 
@@ -36,7 +36,7 @@ Tags:
 //@import 'elements/box';
 //@import 'elements/button';
 //@import 'elements/icon';
-//@import 'elements/table';
+@import 'elements/table';
 //@import 'elements/title';
 
 // FORM ---------------------------------
@@ -46,6 +46,7 @@ Tags:
 
 
 // LAYOUT -------------------------------
-//@import 'layout/hero';
 @import 'layout/footer';
+@import 'layout/section/hero';
+@import 'layout/section/info';
 //@import 'layout/section';
