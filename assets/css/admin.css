@@ -202,6 +202,36 @@ form h2 {
     width: 50%;
 }
 
+.form-timetable th{
+    width: 150px;
+    padding: .5em;
+    line-height: 2;
+    vertical-align: top;
+}
+
+.form-timetable td{
+    line-height: inherit;
+    padding: 15px 0;
+    vertical-align: middle;
+}
+td .service:first-child{
+    margin-bottom: 15px;
+}
+
+
+.form-timetable .service-ok{
+    display: inline-table;
+    width: 160px;
+}
+
+.form-timetable .service-ok input[type="checkbox"]{
+    margin: .5em !important;
+}
+
+.form-timetable .service-de label, .form-timetable .service-a label{
+    margin: 0 .5em;
+}
+
 .form-timetable tr {
     border-bottom: 1px solid #cecece;
 }
