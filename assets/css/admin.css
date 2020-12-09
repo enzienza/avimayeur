@@ -200,6 +200,7 @@ form h2 {
 
 .form-timetable .form-table {
     width: 50%;
+<<<<<<< HEAD
 }
 
 .form-timetable th{
@@ -230,6 +231,8 @@ td .service:first-child{
 
 .form-timetable .service-de label, .form-timetable .service-a label{
     margin: 0 .5em;
+=======
+>>>>>>> main
 }
 
 .form-timetable tr {
