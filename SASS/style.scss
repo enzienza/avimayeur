@@ -28,8 +28,9 @@ Tags:
 
 // COMPONENTS ---------------------------
 //@import 'components/card'
-//@import 'components/menu';
+@import 'components/navbar';
 //@import 'components/tabs';
+@import "components/scrollTop";
 
 
 // ELEMENTS -----------------------------
@@ -46,6 +47,7 @@ Tags:
 
 
 // LAYOUT -------------------------------
+@import "layout/error";
 @import 'layout/footer';
 @import 'layout/section/hero';
 @import 'layout/section/info';

@@ -29,7 +29,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                A Vi Mayeur
+                <?php bloginfo('name')?>
                 <!-- <img src="" alt=""> -->
             </a>
 
@@ -44,12 +44,12 @@
                 /**
                  * [navigation principal]
                  */
-//                wp_nav_menu(array(
-//                    'theme_location' => 'header',
-//                    'depth' => 2,
-//                    'container' => false,
-//                    'menu_class'     => 'navbar-nav'
-//                ));
+                wp_nav_menu(array(
+                    'theme_location' => 'header',
+                    'depth'          => 2,
+                    'container'      => false,
+                    'menu_class'     => 'navbar-nav'
+                ));
                 ?>
             </div>
         </div>

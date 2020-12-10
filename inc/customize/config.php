@@ -72,6 +72,22 @@ add_filter(
     }
 );
 
+
+//function avimayeur_menu_class($classes){
+//    $classes[] = 'nav-item';
+//    return $classes;
+//}
+//
+//add_filter( "nav_menu_css_class", 'avimayeur_menu_class' );
+//
+//function avimayeur_menu_class_link($attrs){
+//    $attrs['class'] = 'nav-link';
+//    return $attrs;
+//}
+//
+//add_filter( "nav_menu_link_attributes", "avimayeur_menu_class_link" );
+
+
 /**
  * 3 - Include Styles and script
  *     Function for runs the scripts and css for theme
@@ -105,13 +121,20 @@ if(!function_exists('avimayeur_register_assets')){
 //        );
 
         // MY JS 
-//        wp_enqueue_script(
-//            'scroll-top',
-//            get_template_directory_uri().'/assets/js/scrollTop.js',
-//            [],
-//            '1.0',
-//            true
-//        );
+        wp_enqueue_script(
+            'scroll-top',
+            get_template_directory_uri().'/assets/js/scrollTop.js',
+            [],
+            '1.0',
+            true
+        );
+        wp_enqueue_script(
+            'solid-navbar',
+            get_template_directory_uri().'/assets/js/solid-navbar.js',
+            [],
+            '1.0',
+            true
+        );
 
 
         // cdn jQuery
