@@ -1,9 +1,9 @@
 <?php
 /**
- * Name file:   homepage
+ * Name file:   eventpage
  *
  * Description: This file used to manage the display
- *               all sections of the homepage
+ *               all sections of the eventpage
  *
  * @package WordPress
  * @subpackage avimayeur
@@ -24,24 +24,19 @@
  * 9 - AJOUT STYLE & SCRIPT
  */
 
-class avimayeur_homepage{
+class avimayeur_eventpage{
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
      *     afin d'evite les fautes de frappe
      */
     // page info - level 2
-    const SUB1_TITLE   = 'Homepage';
-    const SUB1_MENU    = 'Homepage';
+    const SUB2_TITLE   = 'Eventpage';
+    const SUB2_MENU    = 'Eventpage';
     const PERMITION    = 'manage_options';
-    const SUB1_GROUP   = 'custom_homepage';
-    const NONCE        = '_custom_homepage';
+    const SUB2_GROUP   = 'custom_eventpage';
+    const NONCE        = '_custom_eventpage';
 
     // definir les section
-    const SECTION_THEME       = 'section_theme';
-    const SECTION_HERO        = 'section_hero';
-    const SECTION_SUGGESTION  = 'section_suggestion';
-    const SECTION_CARTE       = 'section_carte';
-    const SECTION_RESERVATION = 'section_reservation';
 
 
 
@@ -60,10 +55,10 @@ class avimayeur_homepage{
     public static function addMenu(){
         add_submenu_page(
             avimayeur_customtheme::GROUP,        // slug parent
-            self::SUB1_TITLE,                    // page_title
-            self::SUB1_MENU,                     // menu_title
+            self::SUB2_TITLE,                    // page_title
+            self::SUB2_MENU,                     // menu_title
             self::PERMITION,                     // capability
-            self::SUB1_GROUP,                    // slug_menu
+            self::SUB2_GROUP,                    // slug_menu
             [self::class, 'render']              // CALLBACK
         );
     }
@@ -75,18 +70,18 @@ class avimayeur_homepage{
         ?>
         <div class="wrap">
             <h1 class="wp-heagin-inline">
-                Gestion de la page d'accueil
+                Gestion de la page des événements
             </h1>
             <p class="description">
-                Sur cette page vous pouvez gérer l'affichage toutes les sections de la page d'accueil
+                Sur cette page vous pouvez gérer l'affichage toutes de la page des événements
             </p>
         </div>
 
         <form class="customize-theme" action="options.php" method="post" enctype="multipart/form-data">
             <?php
                 wp_nonce_field(self::NONCE, self::NONCE);
-                settings_fields(self::SUB1_GROUP);
-                do_settings_sections(self::SUB1_GROUP);
+                settings_fields(self::SUB2_GROUP);
+                do_settings_sections(self::SUB2_GROUP);
             ?>
             <?php submit_button(); ?>
         </form>
@@ -120,6 +115,6 @@ class avimayeur_homepage{
 
 }
 
-if (class_exists('avimayeur_homepage')) {
-    avimayeur_homepage::register();
+if (class_exists('avimayeur_eventpage')) {
+    avimayeur_eventpage::register();
 }

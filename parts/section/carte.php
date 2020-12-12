@@ -1,6 +1,6 @@
 <?php
 /**
- * Name file :   suggestion
+ * Name file :   carte
  * Description :
  *
  * @package WordPress
@@ -11,7 +11,7 @@
 
 <div class="container" >
     <h1 class="title-section">
-        <?php echo get_option('title_suggestion'); ?>
+        <?php echo get_option('title_carte'); ?>
     </h1>
     <?php if(checked(3, get_option('deco_theme'), false)):?>
         <p class="flip flip-large">
@@ -21,9 +21,9 @@
         </p>
     <?php endif; ?>
 
-    <?php if(checked(1, get_option('add_message_suggestion'), false)): ?>
+    <?php if(checked(1, get_option('add_message_carte'), false)): ?>
         <div class="description">
-            <?php echo get_option('message_suggestion') ?>
+            <?php echo get_option('message_carte') ?>
         </div>
     <?php endif; ?>
 </div>

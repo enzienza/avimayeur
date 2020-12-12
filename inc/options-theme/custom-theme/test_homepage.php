@@ -23,7 +23,7 @@
  * 9 - AJOUT STYLE & SCRIPT
  */
 
-class avimayeur_homepage{
+class testing{
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
      *     afin d'evite les fautes de frappe
@@ -559,6 +559,6 @@ class avimayeur_homepage{
      */
 }
 
-if(class_exists('avimayeur_homepage')){
-    avimayeur_homepage::register();
+if(class_exists('testing')){
+    testing::register();
 }

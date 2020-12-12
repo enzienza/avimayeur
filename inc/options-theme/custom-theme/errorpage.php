@@ -1,9 +1,9 @@
 <?php
 /**
- * Name file:   eventpage
+ * Name file:   errorpage
  *
  * Description: This file used to manage the display
- *               all sections of the eventpage
+ *               all sections of the errorpage
  *
  * @package WordPress
  * @subpackage avimayeur
@@ -24,17 +24,17 @@
  * 9 - AJOUT STYLE & SCRIPT
  */
 
-class avimayeur_eventpage{
+class avimayeur_errorpage{
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
      *     afin d'evite les fautes de frappe
      */
     // page info - level 2
-    const SUB2_TITLE   = 'Eventpage';
-    const SUB2_MENU    = 'Eventpage';
+    const SUB3_TITLE   = 'Errorpage';
+    const SUB3_MENU    = 'Errorpage';
     const PERMITION    = 'manage_options';
-    const SUB2_GROUP   = 'custom_eventpage';
-    const NONCE        = '_custom_eventpage';
+    const SUB3_GROUP   = 'custom_errorpage';
+    const NONCE        = '_custom_errorpage';
 
     // definir les section
 
@@ -55,10 +55,10 @@ class avimayeur_eventpage{
     public static function addMenu(){
         add_submenu_page(
             avimayeur_customtheme::GROUP,        // slug parent
-            self::SUB2_TITLE,                    // page_title
-            self::SUB2_MENU,                     // menu_title
+            self::SUB3_TITLE,                    // page_title
+            self::SUB3_MENU,                     // menu_title
             self::PERMITION,                     // capability
-            self::SUB2_GROUP,                    // slug_menu
+            self::SUB3_GROUP,                    // slug_menu
             [self::class, 'render']              // CALLBACK
         );
     }
@@ -70,18 +70,18 @@ class avimayeur_eventpage{
         ?>
         <div class="wrap">
             <h1 class="wp-heagin-inline">
-                Gestion de la page des événements
+                Gestion de la page d'erreur
             </h1>
             <p class="description">
-                Sur cette page vous pouvez gérer l'affichage toutes de la page des événements
+                Sur cette page vous pouvez gérer l'affichage de la page d'erreur
             </p>
         </div>
 
         <form class="customize-theme" action="options.php" method="post" enctype="multipart/form-data">
             <?php
                 wp_nonce_field(self::NONCE, self::NONCE);
-                settings_fields(self::SUB2_GROUP);
-                do_settings_sections(self::SUB2_GROUP);
+                settings_fields(self::SUB3_GROUP);
+                do_settings_sections(self::SUB3_GROUP);
             ?>
             <?php submit_button(); ?>
         </form>
@@ -115,6 +115,6 @@ class avimayeur_eventpage{
 
 }
 
-if (class_exists('avimayeur_eventpage')) {
-    avimayeur_eventpage::register();
+if (class_exists('avimayeur_errorpage')) {
+    avimayeur_errorpage::register();
 }
