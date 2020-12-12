@@ -1,0 +1,6 @@
+// main: ../_mixins.scss
+
+@mixin filter($string){
+    -webkit-filter: invert($string);
+    filter: invert($string);
+}

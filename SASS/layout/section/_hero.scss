@@ -1,4 +1,4 @@
-// main: ../style.scss
+// main: ../section.scss
 .filter{
     height: 90vh;
     background-position: 50% 50%;
@@ -25,10 +25,10 @@
             @include flex-wrap(wrap);
 
             .logo{
-                /*width: 14em;*/
+                //width: 14em;
                 width: 25%;
                 height: auto;
-
+                @include filter(1);
             }
         }
     }

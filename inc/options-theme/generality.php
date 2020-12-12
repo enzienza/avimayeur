@@ -224,21 +224,21 @@ class avimayeur_generality{
     // DISPLAY SECTION 1 : SECTION_IMG ===================================
     public static function display_section_image(){
         ?>
-            <p class="description">Section dédier aux médias</p>
+            <p class="section-description">Section dédier aux médias</p>
         <?php
     }
 
     // DICPLAY SECTION 2 : SECTION_INFO ==================================
     public static function display_section_info(){
         ?>
-            <p class="description">Section dédiée aux inforamations de contact</p>
+            <p class="section-description">Section dédiée aux inforamations de contact</p>
         <?php
     }
 
     // DICPLAY SECTION 3 : SECTION_URL ===================================
     public static function display_section_url(){
         ?>
-            <p class="description">Section dédiée aux réseaux sociaux</p>
+            <p class="section-description">Section dédiée aux réseaux sociaux</p>
         <?php
     }
 
@@ -247,7 +247,7 @@ class avimayeur_generality{
      *     le fichier sera stocké dans le dossier upload
      */
     public static function handle_file_logo(){
-        if(!empty($_FILES['img_logo'])){
+        if(!empty($_FILES['img_logo']['tmp_name'])){
             $urls = wp_handle_upload($_FILES['img_logo'], array('test_form' => FALSE));
             $temp = $urls['url'];
             return $temp;

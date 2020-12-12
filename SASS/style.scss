@@ -23,7 +23,7 @@ Tags:
 // BASE ---------------------------------
 @import 'base/minireset';
 @import "base/fonts";
-//@import 'base/general';
+@import 'base/general';
 
 
 // COMPONENTS ---------------------------
@@ -38,7 +38,7 @@ Tags:
 //@import 'elements/button';
 //@import 'elements/icon';
 @import 'elements/table';
-//@import 'elements/title';
+@import 'elements/flip';
 
 // FORM ---------------------------------
 //@import 'form/checked';
@@ -47,8 +47,7 @@ Tags:
 
 
 // LAYOUT -------------------------------
+@import "layout/theme";
 @import "layout/error";
 @import 'layout/footer';
-@import 'layout/section/hero';
-@import 'layout/section/info';
-//@import 'layout/section';
+@import 'layout/section';

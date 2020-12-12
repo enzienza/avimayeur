@@ -4906,6 +4906,9 @@ a {
 .flaticon-email:before {
   content: "\f109"; }
 
+.title-section {
+  letter-spacing: 3px; }
+
 .navbar {
   font-family: "philosopher";
   letter-spacing: 1px;
@@ -5025,6 +5028,157 @@ a {
   .table-horaire .hour-item {
     padding: 0 .5em; }
 
+.flip {
+  position: relative;
+  display: block;
+  width: 100%; }
+  .flip::after {
+    position: absolute;
+    bottom: 4px;
+    left: -170px;
+    right: 0;
+    content: '';
+    width: 70px;
+    height: 1px;
+    background: #db8c0a;
+    margin: 0 auto; }
+  .flip::before {
+    position: absolute;
+    bottom: 4px;
+    left: 170px;
+    right: 0;
+    content: '';
+    width: 70px;
+    height: 1px;
+    background: #db8c0a;
+    margin: 0 auto; }
+  .flip .deg1 {
+    position: absolute;
+    bottom: 2px;
+    left: -45px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    content: '';
+    background: #f7ba54;
+    margin: 0 auto;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .flip .deg2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background: #f7ba54;
+    margin: 0 auto;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .flip .deg3 {
+    position: absolute;
+    bottom: 2px;
+    left: 45px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    content: '';
+    background: #f7ba54;
+    margin: 0 auto;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .flip-xlarge::after {
+    left: -200px;
+    width: 100px; }
+  .flip-xlarge::before {
+    left: 200px;
+    width: 100px; }
+  .flip-large::after {
+    left: -190px;
+    width: 90px; }
+  .flip-large::before {
+    left: 190px;
+    width: 90px; }
+  .flip-medium::after {
+    left: -180px;
+    width: 80px; }
+  .flip-medium::before {
+    left: 180px;
+    width: 80px; }
+
+.deco h1 {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: .25em; }
+
+.deco-title h1 {
+  font-family: "philosopher";
+  letter-spacing: 2px;
+  margin-bottom: 2em; }
+
+.flying-left h1::after {
+  content: url("assets/img/flying-left.png");
+  position: relative;
+  top: 1em;
+  margin-left: 1em; }
+.flying-right h1::before {
+  content: url("assets/img/flying-right.png");
+  position: relative;
+  top: 1em;
+  margin-right: 3em; }
+
+.deco-section h1 {
+  text-align: center;
+  padding-top: 2em;
+  letter-spacing: 2px; }
+.deco-section .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3em;
+  width: 80%;
+  text-align: justify; }
+
+.print-right {
+  background: url("assets/img/poose-feet-right.png") no-repeat fixed;
+  background-size: contain;
+  background-position: top right;
+  height: 90vh; }
+.print-left {
+  background: url("assets/img/poose-feet-left.png") no-repeat fixed;
+  background-size: contain;
+  background-position: top left;
+  height: 90vh; }
+  .print-left .description {
+    margin-left: 20%; }
+
+.theme-clair {
+  background: #fafafa;
+  color: #333; }
+  .theme-clair .print-left {
+    background-color: #ededed; }
+  .theme-clair .reservation .content {
+    border: 1px solid #333; }
+  .theme-clair .description {
+    padding-top: 3em;
+    padding-bottom: 3em; }
+.theme-foncer {
+  background: #333;
+  color: #fafafa; }
+  .theme-foncer .print-left {
+    background-color: #404040; }
+  .theme-foncer .reservation .content {
+    border: 1px solid #ededed; }
+  .theme-foncer .flying-left h1::after, .theme-foncer .flying-right h1::before {
+    filter: invert(0.5); }
+  .theme-foncer .description {
+    padding-top: 3em;
+    padding-bottom: 3em; }
+
 .error {
   margin: 0 auto;
   text-align: center;
@@ -5112,9 +5266,49 @@ footer {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .hero .jumb-hero .logo {
-      /*width: 14em;*/
       width: 25%;
+      height: auto;
+      -webkit-filter: invert(1);
+      filter: invert(1); }
+
+.reservation .content {
+  margin: 5em auto;
+  border-radius: 5px;
+  padding: 1em; }
+
+.element-item {
+  text-align: center; }
+
+.reserve {
+  font-family: "philosopher";
+  text-align: center;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .reserve-image {
+    margin-left: -20%;
+    margin-right: -10%; }
+    .reserve-image .miniature {
+      width: 20%;
       height: auto; }
+  .reserve-message {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+  .reserve-phone {
+    text-align: center;
+    font-size: 1.5em;
+    /* font-weight: bold; */
+    letter-spacing: 2px; }
+  .reserve p {
+    margin: 0; }
 
 .info {
   background: #333;
@@ -5170,6 +5364,8 @@ footer {
 
 .block-logo .logo {
   width: 14em;
-  height: auto; }
+  height: auto;
+  -webkit-filter: invert(0.5);
+  filter: invert(0.5); }
 
 /*# sourceMappingURL=style.css.map */

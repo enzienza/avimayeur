@@ -44,6 +44,10 @@ require_once ('inc/customize/custom-dashboard.php');
  */
 require_once ('inc/options-theme/generality.php');
 require_once ('inc/options-theme/horaire.php');
+require_once ('inc/options-theme/custom-theme.php');
+require_once ('inc/options-theme/custom-theme/homepage.php');
+require_once ('inc/options-theme/custom-theme/eventpage.php');
+require_once ('inc/options-theme/custom-theme/errorpage.php');
 
 
 /** =====================================================

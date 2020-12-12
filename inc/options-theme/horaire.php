@@ -229,7 +229,7 @@ class avimayeur_timetable
      */
     public static function display_section_timetable(){
         ?>
-            <p>Section dédiée uniquement aux horaires d'ouverture</p>
+            <p class="section-description">Section dédiée uniquement aux horaires d'ouverture</p>
         <?php
     }
 

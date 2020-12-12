@@ -1,0 +1,57 @@
+// main: ../section.scss
+
+.reservation{
+    .content{
+        margin: 5em auto;
+        border-radius: 5px;
+        //@include flex;
+        //@include justify-content(space-around);
+        //@include align-items(center);
+        padding: 1em;
+    }
+}
+
+
+
+.element{
+    &-list{
+    }
+    &-item{
+        text-align: center;
+    }
+}
+
+
+.reserve{
+    font-family: $font-secondary;
+    text-align: center;
+    margin: 0;
+    @include flex;
+    @include align-items(center);
+    @include justify-content(center);
+
+    &-image{
+        margin-left: -20%;
+        margin-right: -10%;
+        .miniature{
+            width: 20%;
+            height: auto;
+        }
+    }
+
+    &-message{
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    &-phone{
+        text-align: center;
+        font-size: 1.5em;
+        /* font-weight: bold; */
+        letter-spacing: 2px;
+    }
+
+    p{
+        margin: 0;
+    }
+}

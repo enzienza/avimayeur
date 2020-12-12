@@ -60,6 +60,7 @@ wp-content/plugins/hello.php
 
 
 /SASS/.DS_Store
+/SASS/.sass-cache
 /SASS/base/.DS_Store
 /SASS/components/.DS_Store
 /SASS/elements/.DS_Store

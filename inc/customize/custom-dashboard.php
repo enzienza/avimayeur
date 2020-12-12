@@ -22,7 +22,7 @@
  *     Function for hides certain page (element of menu) of dashboard
  */
 function remove_menus(){
-    // remove_menu_page('index.php');                   // Tableau de bord
+    // remove_menu_page('section.php');                   // Tableau de bord
     // remove_menu_page('edit.php');                    // Articles
     // remove_menu_page('upload.php');                  // Media
     // remove_menu_page('edit.php?post_type=page');     // Pages

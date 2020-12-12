@@ -315,3 +315,38 @@ td .service:first-child{
     padding: .5em;
     line-height: 1;
 }
+
+/* ---------------------------------------
+ * form-custom-theme
+ */
+
+.form-customtheme h2, .form-timetable h2, .form-generality h2{
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #5B6786;
+}
+
+.form-customtheme h2::before, .form-timetable h2::before, .form-generality h2::before{
+    content: "-";
+    margin-right: .5em;
+    font-size: larger;
+}
+
+.form-customtheme .section-description,
+.form-timetable .section-description,
+.form-generality .section-description{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 20px;
+    font-weight: lighter;
+    font-size: .9em;
+}
+
+
+/* ------------------------------------------
+ *
+ */
+.importers .import-system{
+    width: 160px;
+}
