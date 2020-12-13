@@ -1,9 +1,10 @@
 <?php
 /**
- * Name file: stick
+ * Name file: suggestion-item
  *
- * Description: This file will allow us to define
- *              if an posts will be present on the homepage
+ * Description: This file will allow us to add
+ *              the content of the CPT 'suggestion'
+ *              => because we do not use the WP editor
  *
  * @package WordPress
  * @subpackage avimayeur
@@ -61,9 +62,10 @@ class MB_suggestion_item{
         $desc_suggestion = get_post_meta($POST->ID, 'desc_suggestion', true);
         $price_suggestion = get_post_meta($POST->ID, 'price_suggestion', true);
         ?>
-            <div>
+            <div class="height-space">
                 <label for="">Ajouter la description</label>
                 <textarea name="desc_suggestion" id="desc_suggestion" class="large-text code"><?php echo $desc_suggestion ?></textarea>
+
             </div>
 
             <div class="height-space">
