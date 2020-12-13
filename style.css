@@ -5115,10 +5115,15 @@ a {
   padding-top: 3em;
   padding-bottom: .25em; }
 
+.suggestion h1 {
+  margin-top: 0; }
+
 .deco-title h1 {
   font-family: "philosopher";
   letter-spacing: 2px;
-  margin-bottom: 2em; }
+  padding-bottom: 2em;
+  margin-bottom: 0;
+  margin-top: 2em; }
 
 .flying-left h1::after {
   content: url("assets/img/flying-left.png");
@@ -5180,6 +5185,10 @@ a {
     padding-bottom: 3em; }
   .theme-foncer .error-code {
     color: #fafafa; }
+  .theme-foncer .card {
+    border-color: #949494; }
+    .theme-foncer .card-text {
+      color: #949494; }
 
 .error {
   margin: 0 auto;
@@ -5370,5 +5379,35 @@ footer {
   height: auto;
   -webkit-filter: invert(0.5);
   filter: invert(0.5); }
+
+.card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 1em;
+  background: inherit; }
+  .card-img {
+    margin-top: .5em; }
+    .card-img .thumbnail {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px; }
+  .card-body {
+    padding: 0;
+    margin: 0 2em; }
+  .card-title {
+    font-family: "philosopher";
+    line-height: 1.45; }
+  .card-text {
+    text-align: justify;
+    font-size: smaller;
+    color: #4d4d4d;
+    margin-bottom: 1em; }
+  .card-price {
+    font-family: "philosopher";
+    color: #F5A623;
+    font-size: 1.5em;
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

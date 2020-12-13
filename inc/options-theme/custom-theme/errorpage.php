@@ -102,7 +102,7 @@ class avimayeur_errorpage{
         // -> créer la section
         add_settings_section(
             self::SECTION_ERROR,                      // SLUG_SECTION
-            'Section error',                          // TITLE
+            'Section erreur',                          // TITLE
             [self::class, 'display_section_error'],   // CALLBACK
             self::SUB3_GROUP                         // SLUG_PAGE
         );

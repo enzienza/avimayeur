@@ -22,8 +22,7 @@
  * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
  * 9 - AJOUT STYLE & SCRIPT
  */
-class avimayeur_timetable
-{
+class avimayeur_timetable{
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
      *     afin d'evite les fautes de frappe

@@ -350,3 +350,17 @@ td .service:first-child{
 .importers .import-system{
     width: 160px;
 }
+
+
+
+/* ------------------------------------------
+ * CUSTOM  POST_TYPE_SUGGESTION
+ */
+.post-type-suggestion #advanced-sortables,
+.post-type-suggestion #slugdiv {
+    display: none !important;
+}
+
+.post-type-suggestion .description {
+    color: #a9a8a8;
+}

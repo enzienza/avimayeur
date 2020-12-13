@@ -20,13 +20,13 @@
             <section class="hero">
                 <?php get_template_part('parts/section/hero'); ?>
             </section>
-            <section class="suggestion deco-title flying-left">
+            <section id="suggestion" class="suggestion deco-title flying-left">
                 <?php get_template_part('parts/section/suggestion'); ?>
             </section>
 
             <?php get_template_part('parts/section/reservation'); ?>
 
-            <section class="carte deco-title flying-right">
+            <section id="carte" class="carte deco-title flying-right">
                 <?php get_template_part('parts/section/carte'); ?>
             </section>
 
@@ -35,13 +35,13 @@
             <section class="hero">
                 <?php get_template_part('parts/section/hero'); ?>
             </section>
-            <section class="suggestion deco-section print-right">
+            <section id="suggestion"  class="suggestion deco-section print-right">
                 <?php get_template_part('parts/section/suggestion'); ?>
             </section>
 
             <?php get_template_part('parts/section/reservation'); ?>
 
-            <section class="carte deco-section print-left">
+            <section id="carte" class="carte deco-section print-left">
                 <?php get_template_part('parts/section/carte'); ?>
             </section>
 
@@ -50,13 +50,13 @@
             <section class="hero">
                 <?php get_template_part('parts/section/hero'); ?>
             </section>
-            <section class="suggestion deco">
+            <section id="suggestion" class="suggestion deco">
                 <?php get_template_part('parts/section/suggestion'); ?>
             </section>
 
             <?php get_template_part('parts/section/reservation'); ?>
 
-            <section class="carte deco">
+            <section id="carte" class="carte deco">
                 <?php get_template_part('parts/section/carte'); ?>
             </section>
         <?php endif; ?>
@@ -72,13 +72,13 @@
             <section class="hero">
                 <?php get_template_part('parts/section/hero'); ?>
             </section>
-            <section class="suggestion deco-title flying-left">
+            <section id="suggestion" class="suggestion deco-title flying-left">
                 <?php get_template_part('parts/section/suggestion'); ?>
             </section>
 
             <?php get_template_part('parts/section/reservation'); ?>
 
-            <section class="carte deco-title flying-right">
+            <section id="carte" class="carte deco-title flying-right">
                 <?php get_template_part('parts/section/carte'); ?>
             </section>
 
@@ -87,13 +87,13 @@
             <section class="hero">
                 <?php get_template_part('parts/section/hero'); ?>
             </section>
-            <section class="suggestion deco-section print-right">
+            <section id="suggestion" class="suggestion deco-section print-right">
                 <?php get_template_part('parts/section/suggestion'); ?>
             </section>
 
             <?php get_template_part('parts/section/reservation'); ?>
 
-            <section class="carte deco-section print-left">
+            <section id="carte" class="carte deco-section print-left">
                 <?php get_template_part('parts/section/carte'); ?>
             </section>
 
@@ -102,13 +102,13 @@
             <section class="hero">
                 <?php get_template_part('parts/section/hero'); ?>
             </section>
-            <section class="suggestion deco">
+            <section id="suggestion" class="suggestion deco">
                 <?php get_template_part('parts/section/suggestion'); ?>
             </section>
 
             <?php get_template_part('parts/section/reservation'); ?>
 
-            <section class="carte deco">
+            <section id="carte" class="carte deco">
                 <?php get_template_part('parts/section/carte'); ?>
             </section>
         <?php endif; ?>

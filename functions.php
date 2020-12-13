@@ -37,7 +37,8 @@ require_once ('inc/customize/custom-dashboard.php');
 /** =====================================================
  *  2 - METABOXES
  */
-
+require_once ('inc/metaboxes/suggestion-item.php');
+require_once ('inc/metaboxes/sticky.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
@@ -53,7 +54,8 @@ require_once ('inc/options-theme/custom-theme/errorpage.php');
 /** =====================================================
  *  4 - POST-TYPE
  */
-
+//require_once ('inc/post-type/test.php');
+require_once('inc/post-type/suggestion.php');
 
 
 /** =====================================================

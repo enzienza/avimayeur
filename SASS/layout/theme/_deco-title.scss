@@ -1,12 +1,16 @@
 // main: ../theme.scss
 
+.suggestion h1{
+    margin-top: 0;
+}
 .deco-title{
     h1{
         font-family: $font-secondary;
         letter-spacing: 2px;
-        margin-bottom: 2em;
+        padding-bottom: 2em;
+        margin-bottom: 0;
+        margin-top: 2em;
     }
-
 }
 
 .flying{

@@ -23,7 +23,7 @@
  */
 function remove_menus(){
     // remove_menu_page('section.php');                   // Tableau de bord
-    // remove_menu_page('edit.php');                    // Articles
+     remove_menu_page('edit.php');                    // Articles
     // remove_menu_page('upload.php');                  // Media
     // remove_menu_page('edit.php?post_type=page');     // Pages
     // remove_menu_page('edit-comments.php');           // Commentaires

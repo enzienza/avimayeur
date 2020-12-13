@@ -51,6 +51,15 @@
         .error-code{
             color: $color-light;
         }
+
+        .card{
+            border-color: darken($color-light, 40%);
+            &-text{
+                color: darken($color-light, 40%);
+            }
+        }
+
+
     }
 }
 
