@@ -37,7 +37,6 @@ class avimayeur_homepage{
     const NONCE        = '_custom_homepage';
 
     // definir les section
-    const SECTION_THEME       = 'section_theme';
     const SECTION_HERO        = 'section_hero';
     const SECTION_SUGGESTION  = 'section_suggestion';
     const SECTION_RESERVATION = 'section_reservation';
@@ -96,43 +95,7 @@ class avimayeur_homepage{
      */
     public static function registerSettings(){
         /**
-         * SECTION 1 : SECTION_THEME ==================================
-         *             -> Créer la section
-         *             -> Ajouter les éléments du formulaire
-         *             -> Sauvegarder les champs
-         *
-         */
-        // -> créer la section
-        add_settings_section(
-            self::SECTION_THEME,                     // SLUG_SECTION
-            'Theme',                                 // TITLE
-            [self::class, 'display_section_theme'],  // CALLBACK
-            self::SUB1_GROUP                         // SLUG_PAGE
-        );
-
-        // -> Ajouter les éléments du formulaire
-        add_settings_field(
-            'color_theme',                           // SLUG_FIELD
-            'Choisir la couleur',                    // LABEL
-            [self::class,'field_color_theme'],       // CALLBACK
-            self::SUB1_GROUP,                        // SLUG_PAGE
-            self::SECTION_THEME                      // SLUG_SECTION
-        );
-
-        add_settings_field(
-            'deco_theme',                            // SLUG_FIELD
-            'Choisir la décotation',                 // LABEL
-            [self::class,'field_deco_theme'],        // CALLBACK
-            self::SUB1_GROUP,                        // SLUG_PAGE
-            self::SECTION_THEME                      // SLUG_SECTION
-        );
-
-        // -> Sauvegarder les champs
-        register_setting(self::SUB1_GROUP, 'color_theme');
-        register_setting(self::SUB1_GROUP, 'deco_theme');
-
-        /**
-         * SECTION 2 : SECTION_HERO ===================================
+         * SECTION 1 : SECTION_HERO ==================================
          *             -> Créer la section
          *             -> Ajouter les éléments du formulaire
          *             -> Sauvegarder les champs
@@ -181,7 +144,7 @@ class avimayeur_homepage{
 
 
         /**
-         * SECTION 3 : SECTION_SUGGESTION =============================
+         * SECTION 2 : SECTION_SUGGESTION =============================
          *             -> Créer la section
          *             -> Ajouter les éléments du formulaire
          *             -> Sauvegarder les champs
@@ -217,7 +180,7 @@ class avimayeur_homepage{
         register_setting(self::SUB1_GROUP, 'message_suggestion');
 
         /**
-         * SECTION 4 : SECTION_RESERVATION ============================
+         * SECTION 3 : SECTION_RESERVATION ============================
          *             -> Créer la section
          *             -> Ajouter les éléments du formulaire
          *             -> Sauvegarder les champs
@@ -263,7 +226,7 @@ class avimayeur_homepage{
 
 
         /**
-         * SECTION 5 : SECTION_CARTE ==================================
+         * SECTION 4 : SECTION_CARTE ==================================
          *             -> Créer la section
          *             -> Ajouter les éléments du formulaire
          *             -> Sauvegarder les champs
@@ -303,15 +266,7 @@ class avimayeur_homepage{
     /**
      * 6 - DEFINIR LES SECTIONS DE LA PAGE
      */
-    // DISPLAY SECTION 1 : SECTION_THEME ==================================
-    public static function display_section_theme(){
-        ?>
-            <p class="section-description">
-                Cetter partie est dédié à la gestion de theme
-            </p>
-        <?php
-    }
-    // DISPLAY SECTION 2 : SECTION_HERO ===================================
+    // DISPLAY SECTION 1 : SECTION_HERO ==================================
     public static function display_section_hero(){
         ?>
             <p class="section-description">
@@ -319,7 +274,7 @@ class avimayeur_homepage{
             </p>
         <?php
     }
-    // DISPLAY SECTION 3 : SECTION_SUGGESTION =============================
+    // DISPLAY SECTION 2 : SECTION_SUGGESTION =============================
     public static function display_section_suggestion(){
         ?>
             <p class="section-description">
@@ -327,7 +282,7 @@ class avimayeur_homepage{
             </p>
         <?php
     }
-    // DISPLAY SECTION 4 : SECTION_RESERVATION ============================
+    // DISPLAY SECTION 3 : SECTION_RESERVATION ============================
     public static function display_section_revervation(){
         ?>
         <p class="section-description">
@@ -335,7 +290,7 @@ class avimayeur_homepage{
         </p>
         <?php
     }
-    // DISPLAY SECTION 5 : SECTION_CARTE ==================================
+    // DISPLAY SECTION 4 : SECTION_CARTE ==================================
     public static function display_section_carte(){
         ?>
             <p class="section-description">
@@ -363,72 +318,7 @@ class avimayeur_homepage{
     /**
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
-    // FIELD SECTION 1 : SECTION_THEME ==================================
-    public static function field_color_theme(){
-        $color_theme = esc_attr(get_option('color_theme'));
-        ?>
-            <p class="description">Cocher la couleur du thème souhaiter</p>
-            <p>
-                <input type="radio"
-                       id="theme_clair"
-                       name="color_theme"
-                       value="1"
-                       <?php checked(1, $color_theme, true); ?>
-                />
-                <label for="">Thème claire</label>
-            </p>
-            <p>
-                <input type="radio"
-                       id="theme_foncer"
-                       name="color_theme"
-                       value="2"
-                       <?php checked(2, $color_theme, true); ?>
-                />
-                <label for="">Thème foncer</label>
-            </p>
-        <?php
-    }
-    public static function field_deco_theme(){
-        $deco_theme = esc_attr(get_option('deco_theme'));
-        ?>
-            <p class="description">Cocher l'élement design souhaiter</p>
-            <p>
-                <input type="radio"
-                       id="title_deco"
-                       name="deco_theme"
-                       value="1"
-                       <?php checked(1, $deco_theme, true); ?>
-                />
-                <label for="">
-                    Ajouter la déco au titre
-                    <span class="desc">(Le vol des oies)</span>
-                </label>
-            </p>
-            <p>
-                <input type="radio"
-                       id="section_deco"
-                       name="deco_theme"
-                       value="2"
-                       <?php checked(2, $deco_theme, true); ?>
-                />
-                <label for="">
-                    Ajouter la déco à la section
-                    <span class="desc">(Les empreintes de pas d'oie)</span>
-                </label>
-            </p>
-            <p>
-                <input type="radio"
-                       id="no_deco"
-                       name="deco_theme"
-                       value="3"
-                       <?php checked(3, $deco_theme, true);?>
-                />
-                <label for="">Pas de décoration</label>
-            </p>
-        <?php
-    }
-
-    // FIELD SECTION 2 : SECTION_HERO ===================================
+    // FIELD SECTION 1 : SECTION_HERO ===================================
     public static function field_image_hero(){
         $add_image_hero = esc_attr(get_option('add_image_hero'));
         ?>
@@ -493,7 +383,7 @@ class avimayeur_homepage{
         <?php
     }
 
-    // FIELD SECTION 3 : SECTION_SUGGESTION =============================
+    // FIELD SECTION 2 : SECTION_SUGGESTION =============================
    public static function field_title_suggestion(){
         $title_suggestion = esc_attr(get_option('title_suggestion'));
         ?>
@@ -525,7 +415,7 @@ class avimayeur_homepage{
        <?php
    }
 
-    // FIELD SECTION 4 : SECTION_RESERVATION ============================
+    // FIELD SECTION 3 : SECTION_RESERVATION ============================
     public static function field_hidden_reservation(){
         $hidden_reservation = esc_attr(get_option('hidden_reservation'));
         ?>
@@ -580,7 +470,7 @@ class avimayeur_homepage{
         <?php
     }
 
-    // FIELD SECTION 5 : SECTION_CARTE ==================================
+    // FIELD SECTION 4 : SECTION_CARTE ==================================
     public static function field_titre_carte(){
         $title_carte = esc_attr(get_option('title_carte'));
         ?>
