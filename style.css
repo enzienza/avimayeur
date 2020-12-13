@@ -5178,11 +5178,14 @@ a {
   .theme-foncer .description {
     padding-top: 3em;
     padding-bottom: 3em; }
+  .theme-foncer .error-code {
+    color: #fafafa; }
 
 .error {
   margin: 0 auto;
   text-align: center;
-  padding: 3%; }
+  padding: 3%;
+  padding-top: 10%; }
   .error-code {
     bottom: 60%;
     color: #2d353c;

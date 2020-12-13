@@ -10,26 +10,54 @@
 ?>
 
 <?php get_header(); ?>
-    <div class="error my-5 container">
-        <div class="error-code">
-            404
-        </div><!--//error-code-->
 
-        <h1 class="text-hightlight">
-            Nous n'avons pas pu trouver la page ...
-        </h1><!--//text-hightlight-->
+<?php if(checked(1, get_option('color_theme'), false)): ?>
+    <section class="theme-clair">
+        <div class="error container">
+            <div class="error-code">
+                404
+            </div><!--//error-code-->
 
-        <div class="error-desc">
-            <p>
-                Désolé, mais la page que vous recherchez est introuvable ou
-                n'existe pas. Essayez d'actualiser la page ou cliquez sur
-                le bouton ci-dessous pour revenir à la page d'accueil.
-            </p>
-            <div>
-                <a href="<?php echo esc_url( site_url( '/' ) ); ?>">
-                    Retour à la page d'accueil
-                </a>
-            </div>
-        </div><!--//error-desc-->
-    </div><!--//error-->
+            <h1 class="text-hightlight">
+                <?php echo get_option('maintext_error'); ?>
+            </h1><!--//text-hightlight-->
+
+            <div class="error-desc">
+                <p>
+                    <?php echo get_option('message_error'); ?>
+                </p>
+                <div>
+                    <a href="<?php echo esc_url( site_url( '/' ) ); ?>">
+                        Retour à la page d'accueil
+                    </a>
+                </div>
+            </div><!--//error-desc-->
+        </div><!--//error-->
+    </section>
+<?php elseif (checked(2, get_option('color_theme'), false)): ?>
+    <section class="theme-foncer">
+        <div class="error container">
+            <div class="error-code">
+                404
+            </div><!--//error-code-->
+
+            <h1 class="text-hightlight">
+                <?php echo get_option('maintext_error'); ?>
+            </h1><!--//text-hightlight-->
+
+            <div class="error-desc">
+                <p>
+                    <?php echo get_option('message_error'); ?>
+                </p>
+                <div>
+                    <a href="<?php echo esc_url( site_url( '/' ) ); ?>">
+                        Retour à la page d'accueil
+                    </a>
+                </div>
+            </div><!--//error-desc-->
+        </div><!--//error-->
+    </section>
+<?php endif; ?>
+
+
 <?php get_footer(); ?>

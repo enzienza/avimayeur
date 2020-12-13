@@ -38,11 +38,6 @@
                 </div>
             <?php //else: ?>
             <?php endif; ?>
-
-
-
-
-
         </div>
     </div>
 <?php else: ?>

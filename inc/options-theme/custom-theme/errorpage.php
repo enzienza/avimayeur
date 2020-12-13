@@ -37,7 +37,7 @@ class avimayeur_errorpage{
     const NONCE        = '_custom_errorpage';
 
     // definir les section
-
+    const SECTION_ERROR = 'section_errorpage';
 
 
     /**
@@ -45,7 +45,7 @@ class avimayeur_errorpage{
      */
     public static function register(){
         add_action('admin_menu', [self::class, 'addMenu']);
-        //add_action('admin_init', [self::class, 'registerSettings']);
+        add_action('admin_init', [self::class, 'registerSettings']);
         //add_action('admin_enqueue_scripts', [self::class, 'registerScripts']);
     }
 
@@ -77,7 +77,7 @@ class avimayeur_errorpage{
             </p>
         </div>
 
-        <form class="customize-theme" action="options.php" method="post" enctype="multipart/form-data">
+        <form class="form-customtheme" action="options.php" method="post" enctype="multipart/form-data">
             <?php
                 wp_nonce_field(self::NONCE, self::NONCE);
                 settings_fields(self::SUB3_GROUP);
@@ -91,12 +91,61 @@ class avimayeur_errorpage{
     /**
      * 5 - ENREGISTRER LES PARAMETTRES D'OPTIONS
      */
+    public static function registerSettings(){
+        /**
+         * SECTION 1 : SECTION_HERO ==================================
+         *             -> Créer la section
+         *             -> Ajouter les éléments du formulaire
+         *             -> Sauvegarder les champs
+         *
+         */
+        // -> créer la section
+        add_settings_section(
+            self::SECTION_ERROR,                      // SLUG_SECTION
+            'Section error',                          // TITLE
+            [self::class, 'display_section_error'],   // CALLBACK
+            self::SUB3_GROUP                         // SLUG_PAGE
+        );
+        // -> Ajouter les éléments du formulaire
+        add_settings_field(
+            'type_error',                           // SLUG_FIELD
+            'Type d\'erreur',                       // LABEL
+            [self::class,'field_type_error'],       // CALLBACK
+            self::SUB3_GROUP,                       // SLUG_PAGE
+            self::SECTION_ERROR                     // SLUG_SECTION
+        );
+        add_settings_field(
+            'maintext_error',                           // SLUG_FIELD
+            'Texte principal',                       // LABEL
+            [self::class,'field_maintext_error'],       // CALLBACK
+            self::SUB3_GROUP,                       // SLUG_PAGE
+            self::SECTION_ERROR                     // SLUG_SECTION
+        );
+        add_settings_field(
+            'message_error',                           // SLUG_FIELD
+            'Message d\'erreur',                       // LABEL
+            [self::class,'field_message_error'],       // CALLBACK
+            self::SUB3_GROUP,                       // SLUG_PAGE
+            self::SECTION_ERROR                     // SLUG_SECTION
+        );
+
+        // -> Sauvegarder les champs
+        register_setting(self::SUB3_GROUP, 'maintext_error');
+        register_setting(self::SUB3_GROUP, 'message_error');
+
+    }
 
 
     /**
      * 6 - DEFINIR LES SECTIONS DE LA PAGE
      */
-
+    public static function display_section_error(){
+        ?>
+            <p class="section-description">
+                Dans cette section, vous pouvez définir les différents message d'erreur
+            </p>
+        <?php
+    }
 
     /**
      * 7 - DEFINIR LE TELECHARGEMENT DES FICHIER
@@ -107,6 +156,30 @@ class avimayeur_errorpage{
     /**
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
+    public static function field_type_error(){
+        ?>
+            <p class="">
+                Erreur 404
+            </p>
+        <?php
+    }
+    public static function field_maintext_error(){
+        $maintext_error = esc_attr(get_option('maintext_error'));
+        ?>
+            <input type="text"
+                   id="maintext_error"
+                   name="maintext_error"
+                   value="<?php echo $maintext_error ?>"
+                   class="large-text"
+            />
+        <?php
+    }
+    public static function field_message_error(){
+        $message_error = esc_attr(get_option('message_error'));
+        ?>
+            <textarea id="message_error" name="message_error" class="large-text code"><?php echo $message_error ?></textarea>
+        <?php
+    }
 
 
     /**

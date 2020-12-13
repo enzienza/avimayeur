@@ -77,20 +77,32 @@ class avimayeur_eventpage{
             </p>
         </div>
 
-        <form class="customize-theme" action="options.php" method="post" enctype="multipart/form-data">
-            <?php
-                wp_nonce_field(self::NONCE, self::NONCE);
-                settings_fields(self::SUB2_GROUP);
-                do_settings_sections(self::SUB2_GROUP);
-            ?>
-            <?php submit_button(); ?>
-        </form>
+<!--        <form class="form-customtheme" action="options.php" method="post" enctype="multipart/form-data">-->
+<!--            --><?php
+//                wp_nonce_field(self::NONCE, self::NONCE);
+//                settings_fields(self::SUB2_GROUP);
+//                do_settings_sections(self::SUB2_GROUP);
+//            ?>
+<!--            --><?php //submit_button(); ?>
+<!--        </form>-->
         <?php
     }
 
     /**
      * 5 - ENREGISTRER LES PARAMETTRES D'OPTIONS
      */
+//    public static function registerSettings(){
+//        /**
+//         * SECTION 1 : SECTION_HERO ==================================
+//         *             -> Créer la section
+//         *             -> Ajouter les éléments du formulaire
+//         *             -> Sauvegarder les champs
+//         *
+//         */
+//        // -> créer la section
+//        // -> Ajouter les éléments du formulaire
+//        // -> Sauvegarder les champs
+//    }
 
 
     /**
