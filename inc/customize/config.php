@@ -49,8 +49,6 @@ if(!function_exists('avimayeur_supports')){
 add_action('after_setup_theme','avimayeur_supports' );
 
 
-
-
 /**
  * 2 - Custom css nav menu
  *     nav_menu_css_class: Filters the CSS classes applied to a menu item’s list item element.
@@ -73,21 +71,6 @@ add_filter(
 );
 
 
-//function avimayeur_menu_class($classes){
-//    $classes[] = 'nav-item';
-//    return $classes;
-//}
-//
-//add_filter( "nav_menu_css_class", 'avimayeur_menu_class' );
-//
-//function avimayeur_menu_class_link($attrs){
-//    $attrs['class'] = 'nav-link';
-//    return $attrs;
-//}
-//
-//add_filter( "nav_menu_link_attributes", "avimayeur_menu_class_link" );
-
-
 /**
  * 3 - Include Styles and script
  *     Function for runs the scripts and css for theme
@@ -97,6 +80,7 @@ if(!function_exists('avimayeur_register_assets')){
     function avimayeur_register_assets(){
 
         /* SCRIPT ---------------------------------- */
+
         // cdn JS bootstrap 4.0 
         wp_register_script(
             'bootstrap',
@@ -113,12 +97,7 @@ if(!function_exists('avimayeur_register_assets')){
         wp_enqueue_script('bootstrap');
 
         // JS theme 
-//        wp_register_script(
-//            'fontawesome',
-//            get_template_directory_uri().'/assets/plugins/fontawesome/js/all.js',
-//            [],
-//            '5.13.0', true
-//        );
+
 
         // MY JS 
         wp_enqueue_script(
@@ -135,15 +114,32 @@ if(!function_exists('avimayeur_register_assets')){
             '1.0',
             true
         );
-
+        wp_enqueue_script(
+            'scroll-spy',
+            get_template_directory_uri().'/assets/js/scrollSpy.js',
+            [],
+            '1.0',
+            true
+        );
+        wp_enqueue_script(
+            'menu_ancestor',
+            get_template_directory_uri().'/assets/js/menu_ancestor.js',
+            [],
+            '1.0',
+            true
+        );
 
         // cdn jQuery
         wp_deregister_script('jquery');
         wp_register_script(
             'jquery',
-            'https://code.jquery.com/jquery-3.2.1.slim.min.js',
-            [], '3.2.1', true
+            'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+            [],
+            '3.5.1',
+            true
         );
+
+
 
         /* STYLE ----------------------------------- */
         // cdn CSS bootstrap 4.O

@@ -4941,6 +4941,18 @@ a {
     .navbar-nav .current-menu-item .nav-link::after {
       right: 0;
       left: 60%; }
+  .navbar-nav .active {
+    display: block; }
+    .navbar-nav .active::before, .navbar-nav .active::after {
+      -webkit-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+      -o-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+      transition: left 0.1s ease 0s, right 0.1s ease 0.1s; }
+    .navbar-nav .active::before {
+      left: 0;
+      right: 60%; }
+    .navbar-nav .active::after {
+      right: 0;
+      left: 60%; }
   .navbar-nav .nav-item {
     position: relative;
     padding: 0 1em; }

@@ -49,6 +49,24 @@
         }
     }
 
+    .active{
+        // coulor text current
+        display: block;
+
+        &::before, &::after{
+            @include double-transition(left 0.1s ease 0s, right 0.1s ease 0.1s);
+        }
+
+        &::before{
+            left: 0;
+            right: 60%;
+        }
+        &::after{
+            right: 0;
+            left: 60%;
+        }
+    }
+
     //<li> => all items in menu
     .nav-item{
         position: relative;
