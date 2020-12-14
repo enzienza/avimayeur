@@ -56,7 +56,16 @@
                     </div>
                     <div class="card-body">
                         <h2 class="card-title"><?php the_title() ?></h2>
-                        <p class="card-text"><?php echo get_post_meta(get_the_ID(), 'desc_suggestion', true) ?></p>
+<!--                        <p class="card-text">--><?php //echo get_post_meta(get_the_ID(), 'desc_suggestion', true) ?><!--</p>-->
+                        <p class="card-text">
+                            <?php
+                                $desc_suggestion = get_post_meta(get_the_ID(), 'desc_suggestion', true);
+
+                                //echo get_post_meta(get_the_ID(), 'desc_suggestion', true)
+
+                                echo mb_strimwidth($desc_suggestion, 0, 150, '');
+                            ?>
+                        </p>
                         <p class="card-price"><?php echo get_post_meta(get_the_ID(), 'price_suggestion', true) ?> €</p>
                     </div>
                 </div><!--//card-->

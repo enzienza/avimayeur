@@ -8,8 +8,13 @@
     flex-direction: row;
     padding: 1em;
     background: inherit;
+    max-height: 230px;
+    min-height: 200px;
+    height: 100%;
+    margin-bottom: 4.5em;
 
     &-img{
+        width: auto;
         margin-top: .5em;
         .thumbnail{
             border-radius: 50%;
@@ -40,5 +45,7 @@
         color: $color-primary;
         font-size: 1.5em;
         margin-bottom: 0;
+        position: absolute;
+        bottom: 1em;
     }
 }

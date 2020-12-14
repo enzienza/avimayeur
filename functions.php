@@ -54,8 +54,8 @@ require_once ('inc/options-theme/custom-theme/errorpage.php');
 /** =====================================================
  *  4 - POST-TYPE
  */
-//require_once ('inc/post-type/test.php');
-require_once('inc/post-type/suggestion.php');
+require_once ('inc/post-type/suggestion.php');
+require_once ('inc/post-type/cartes.php');
 
 
 /** =====================================================

@@ -5123,7 +5123,7 @@ a {
   letter-spacing: 2px;
   padding-bottom: 2em;
   margin-bottom: 0;
-  margin-top: 2em; }
+  margin-top: 1em; }
 
 .flying-left h1::after {
   content: url("assets/img/flying-left.png");
@@ -5176,6 +5176,8 @@ a {
   color: #fafafa; }
   .theme-foncer .print-left {
     background-color: #404040; }
+  .theme-foncer .deco-title h1 {
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
   .theme-foncer .reservation .content {
     border: 1px solid #ededed; }
   .theme-foncer .flying-left h1::after, .theme-foncer .flying-right h1::before {
@@ -5187,8 +5189,12 @@ a {
     color: #fafafa; }
   .theme-foncer .card {
     border-color: #949494; }
+    .theme-foncer .card-title {
+      text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
     .theme-foncer .card-text {
       color: #949494; }
+    .theme-foncer .card-price {
+      text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
 
 .error {
   margin: 0 auto;
@@ -5386,8 +5392,13 @@ footer {
   -ms-flex-direction: row;
   flex-direction: row;
   padding: 1em;
-  background: inherit; }
+  background: inherit;
+  max-height: 230px;
+  min-height: 200px;
+  height: 100%;
+  margin-bottom: 4.5em; }
   .card-img {
+    width: auto;
     margin-top: .5em; }
     .card-img .thumbnail {
       border-radius: 50%;
@@ -5408,6 +5419,8 @@ footer {
     font-family: "philosopher";
     color: #F5A623;
     font-size: 1.5em;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 1em; }
 
 /*# sourceMappingURL=style.css.map */
