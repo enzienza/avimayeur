@@ -56,6 +56,7 @@ require_once ('inc/options-theme/custom-theme/errorpage.php');
  */
 require_once ('inc/post-type/suggestion.php');
 require_once ('inc/post-type/cartes.php');
+require_once ('inc/post-type/evenements.php');
 
 
 /** =====================================================

@@ -27,7 +27,7 @@ class MB_sticky{
     const META_KEY = 'sticky';
     const NONCE    = '_sticky';
     const TITLE_MB = 'Mettre en avant';
-    const SCREEN   = array('suggestion');
+    const SCREEN   = array('suggestion', 'evenements');
 
     /**
      * 2 - DEFINIR LES HOOKS ACTIONS
@@ -47,7 +47,7 @@ class MB_sticky{
                 self::TITLE_MB,             // TITLE_META_BOX
                 [self::class, 'render'],    // CALLBACK
                 self::SCREEN,               // WP_SCREEN
-                'normal',                     // CONTEXT [ normal | advanced | side ]
+                'side',                     // CONTEXT [ normal | advanced | side ]
                 'high'                      // PRIORITY [ high | default | low ]
             );
         }

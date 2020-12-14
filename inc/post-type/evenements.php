@@ -1,33 +1,33 @@
 <?php
 /**
- * Name file: cartes
+ * Name file: evenements
  *
- * Description: This file create a custom post type for manage of "cartes"
+ * Description: This file create a custom post type for manage of "evenements"
  *
  * @package WordPress
  * @subpackage avimayeur
  * @version 1.0
  */
 
-function CPT_cartes(){
+function CPT_evenements(){
     /**
      * définir les options du label
      * @var array
      */
     $labels = array(
-        'name'               => __('Cartes', 'cartes'),
-        'singular_name'      => __('Carte', 'cartes'),
-        'menu_name'          => __('Cartes', 'cartes'),
-        'name_admin_bar'     => __('Carte', 'cartes'),
-        'add_new'            => __('Ajouter', 'cartes'),
-        'add_new_item'       => __('Ajouter une carte', 'cartes'),
-        'new_item'           => __('Nouvelle carte', 'cartes'),
-        'edit_item'          => __('Éditer une carte', 'cartes'),
-        'view_item'          => __('Voir la carte', 'cartes'),
-        'all_items'          => __('Toutes les cartes', 'cartes'),
-        'search_items'       => __('Rechercher parmi les cartes', 'cartes'),
-        'not_found'          => __('Pas de carte trouvées', 'cartes'),
-        'not_fount_in_trash' => __('Pas de carte dans la corbeille', 'cartes'),
+        'name'               => __('Événements', 'evenements'),
+        'singular_name'      => __('Événement', 'evenements'),
+        'menu_name'          => __('Événements', 'evenements'),
+        'name_admin_bar'     => __('Événement', 'evenements'),
+        'add_new'            => __('Ajouter', 'evenements'),
+        'add_new_item'       => __('Ajouter un événement', 'evenements'),
+        'new_item'           => __('Nouvelle événement', 'evenements'),
+        'edit_item'          => __('Éditer un événement', 'evenements'),
+        'view_item'          => __('Voir l\'événement', 'evenements'),
+        'all_items'          => __('Toutes les événements', 'evenements'),
+        'search_items'       => __('Rechercher parmi les événements', 'evenements'),
+        'not_found'          => __('Pas d\'événement trouvées', 'evenements'),
+        'not_fount_in_trash' => __('Pas d\'événement dans la corbeille', 'evenements'),
     );
 
     /**
@@ -35,7 +35,7 @@ function CPT_cartes(){
      * @var array
      */
     $rewrite = array(
-        'slug'         => 'cartes',
+        'slug'         => 'evenements',
         //'with_front'   => true,
         //'hierarchical' => false,
     );
@@ -78,14 +78,14 @@ function CPT_cartes(){
         'query_var'         => true,
         'show_in_nav_menus' => false,
         'capability_type'   => 'post',
-        'menu_position'     => 6,
-        'menu_icon'         => 'dashicons-images-alt',
+        'menu_position'     => 7,
+        'menu_icon'         => 'dashicons-megaphone',
         //'menu_icon'         => $iconSVG,
     );
 
 
-    register_post_type('cartes', $args);
+    register_post_type('evenements', $args);
 
 }
 
-add_action('init', 'CPT_cartes');
+add_action('init', 'CPT_evenements');

@@ -17,7 +17,7 @@ function CPT_suggestion(){
     $labels = array(
         'name'               => __('Suggestions', 'suggestion'),
         'singular_name'      => __('Suggestion', 'suggestion'),
-        'menu_name'          => __('Suggestion', 'suggestion'),
+        'menu_name'          => __('Suggestions', 'suggestion'),
         'name_admin_bar'     => __('Suggestion', 'suggestion'),
         'add_new'            => __('Ajouter', 'suggestion'),
         'add_new_item'       => __('Ajouter une suggestion', 'suggestion'),

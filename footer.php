@@ -25,7 +25,7 @@
 
         <small class="copyright">
             <div class="float-left">
-                <a href="#" class="">Privacy Policy</a>
+                <a href="http://localhost:8888/projet_2020/diden/wordpress/politique-de-confidentialite/" class="">Privacy Policy</a>
             </div>
 
             <div class="float-right">
