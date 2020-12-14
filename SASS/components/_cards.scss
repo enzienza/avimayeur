@@ -1,0 +1,51 @@
+// main: ../style.scss
+
+
+.card{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 1em;
+    background: inherit;
+    max-height: 230px;
+    min-height: 200px;
+    height: 100%;
+    margin-bottom: 4.5em;
+
+    &-img{
+        width: auto;
+        margin-top: .5em;
+        .thumbnail{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    &-body{
+        padding: 0;
+        margin: 0 2em;
+    }
+
+    &-title{
+        font-family: $font-secondary;
+        line-height: 1.45;
+    }
+
+    &-text{
+        text-align: justify;
+        font-size: smaller;
+        color: lighten($color-dark, 10%);
+        margin-bottom: 1em;
+    }
+
+    &-price{
+        font-family: $font-secondary;
+        color: $color-primary;
+        font-size: 1.5em;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 1em;
+    }
+}

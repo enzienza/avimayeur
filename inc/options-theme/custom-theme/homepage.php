@@ -168,16 +168,24 @@ class avimayeur_homepage{
         );
         add_settings_field(
             'message_suggestion',                         // SLUG_FIELD
-            'Gestion d\'un message',                      // LABEL
+            'Gestion d\'un message d\'introduction',      // LABEL
             [self::class,'field_message_suggestion'],     // CALLBACK
             self::SUB1_GROUP,                             // SLUG_PAGE
             self::SECTION_SUGGESTION                      // SLUG_SECTION
+        );
+        add_settings_field(
+            'ifnot_suggestion',                         // SLUG_FIELD
+            'Gestion d\'un message',                    // LABEL
+            [self::class,'field_ifnot_suggestion'],     // CALLBACK
+            self::SUB1_GROUP,                           // SLUG_PAGE
+            self::SECTION_SUGGESTION                    // SLUG_SECTION
         );
 
         // -> Sauvegarder les champs
         register_setting(self::SUB1_GROUP, 'title_suggestion');
         register_setting(self::SUB1_GROUP, 'add_message_suggestion');
         register_setting(self::SUB1_GROUP, 'message_suggestion');
+        register_setting(self::SUB1_GROUP, 'ifnot_suggestion');
 
         /**
          * SECTION 3 : SECTION_RESERVATION ============================
@@ -211,7 +219,7 @@ class avimayeur_homepage{
         );
         add_settings_field(
             'message_reservation',                        // SLUG_FIELD
-            'Gestion d\'un message',                   // LABEL
+            'Gestion d\'un message',                      // LABEL
             [self::class,'field_message_reservation'],    // CALLBACK
             self::SUB1_GROUP,                             // SLUG_PAGE
             self::SECTION_RESERVATION                     // SLUG_SECTION
@@ -249,17 +257,25 @@ class avimayeur_homepage{
             self::SECTION_CARTE                  // SLUG_SECTION
         );
         add_settings_field(
-            'message_carte',                     // SLUG_FIELD
-            'Gestion d\'un message',             // LABEL
-            [self::class,'field_message_carte'], // CALLBACK
-            self::SUB1_GROUP,                    // SLUG_PAGE
-            self::SECTION_CARTE                  // SLUG_SECTION
+            'message_carte',                         // SLUG_FIELD
+            'Gestion d\'un message d\'introduction', // LABEL
+            [self::class,'field_message_carte'],     // CALLBACK
+            self::SUB1_GROUP,                        // SLUG_PAGE
+            self::SECTION_CARTE                      // SLUG_SECTION
+        );
+        add_settings_field(
+            'maintext_carte',                     // SLUG_FIELD
+            'Texte principal',                    // LABEL
+            [self::class,'field_maintext_carte'], // CALLBACK
+            self::SUB1_GROUP,                     // SLUG_PAGE
+            self::SECTION_CARTE                   // SLUG_SECTION
         );
 
         // -> Sauvegarder les champs
         register_setting(self::SUB1_GROUP, 'title_carte');
         register_setting(self::SUB1_GROUP, 'add_message_carte');
         register_setting(self::SUB1_GROUP, 'message_carte');
+        register_setting(self::SUB1_GROUP, 'maintext_carte');
 
     }
 
@@ -415,6 +431,21 @@ class avimayeur_homepage{
        <?php
    }
 
+   public static function field_ifnot_suggestion(){
+       $ifnot_suggestion = esc_attr(get_option('ifnot_suggestion'));
+        ?>
+            <p class="description">
+                Ajouter un message s'il n'y a pas de suggestion à proposer
+            </p>
+           <input type="text"
+                  id="ifnot_suggestion"
+                  name="ifnot_suggestion"
+                  value="<?php echo $ifnot_suggestion ?>"
+                  class="large-text"
+           />
+       <?php
+   }
+
     // FIELD SECTION 3 : SECTION_RESERVATION ============================
     public static function field_hidden_reservation(){
         $hidden_reservation = esc_attr(get_option('hidden_reservation'));
@@ -499,6 +530,21 @@ class avimayeur_homepage{
             <label for="">Ajouter le texte souhaiter</label>
             <textarea name="message_carte" id="message_carte" class="large-text code"><?php echo $message_carte ?></textarea>
         </div>
+        <?php
+    }
+
+    public static function field_maintext_carte(){
+        $maintext_carte = esc_attr(get_option('maintext_carte'));
+        ?>
+            <p class="description">
+                Ajouter un message pour inciter la clientèle cliquer sur le menu
+            </p>
+            <input type="text"
+                   id="maintext_carte"
+                   name="maintext_carte"
+                   value="<?php echo $maintext_carte ?>"
+                   class="large-text"
+            />
         <?php
     }
 

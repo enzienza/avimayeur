@@ -66,6 +66,11 @@
 
     <!-- START TAB-CONTENT -->
     <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active">
+            <p class="else-display">
+                <?php echo get_option('maintext_carte') ?>
+            </p>
+        </div>
         <?php
             wp_reset_postdata();
 

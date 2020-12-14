@@ -5,6 +5,7 @@
         text-align: center;
         padding-top: 2em;
         letter-spacing: 2px;
+        padding-bottom: 2em;
     }
 
     .description{
@@ -20,7 +21,7 @@
         background: url('assets/img/poose-feet-right.png') no-repeat fixed;
         background-size: contain;
         background-position: top right;
-        height: 90vh;
+        //height: 90vh;
 
     }
 
@@ -28,7 +29,7 @@
         background: url('assets/img/poose-feet-left.png') no-repeat fixed;
         background-size: contain;
         background-position: top left;
-        height: 90vh;
+        //height: 90vh;
         .description{
             margin-left: 20%;
         }

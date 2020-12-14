@@ -1,0 +1,210 @@
+// main: ../style.scss
+
+
+// ============
+// = NAV-TABS =
+// ============
+.nav-tabs{
+    @include justify-content(center);
+    border: none;
+
+
+    .nav-item{
+        width: 8.5em;
+        margin: 0 1em;
+        text-align: center;
+    }
+
+    .nav-link.active,
+    .nav-item.show{
+        color: $color-light;
+        border: none;
+        background-color: $color-primary;
+        @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
+    }
+
+    .nav-link{
+        &:hover{
+            color: $color-light;
+            border: none;
+            background-color: $color-primary-light;
+            @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
+        }
+    }
+
+
+    .nav-link{
+        border: 1px solid lighten($color-grey, 20%);
+        color: $color-grey;
+        border-radius: 5px;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}
+
+// ===============
+// = TAB-CONTENT =
+// ===============
+.tab-content{
+    //@include box-shadow(inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3));
+    //border-radius: 10px;
+
+    .show{
+        padding: 1em 0;
+        margin-top: 3em;
+    }
+
+    & > .active{
+        display: block;
+        width: 100%;
+    }
+
+    .wp-block-table{
+        @include flex;
+        @include justify-content(center);
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .tab-pane{
+        h2{
+            padding-top: 1em;
+            padding-bottom: 0.5em;
+            font-size: larger;
+            line-height: 2;
+            text-transform: capitalize;
+            font-weight: bold;
+            text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
+            letter-spacing: 2px;
+        }
+
+        table{
+            padding-bottom: 1.5em;
+            width: 75%;
+
+            tr{
+                border-bottom: 1px solid lighten($color-grey, 30%);
+                line-height: 3;
+                &:last-child{
+                    border: none;
+                }
+            }
+
+            td{
+                padding: 0 .5em;
+                border: none;
+                border-collapse: collapse;
+
+                &:first-child{
+                    //text-align: right;
+                    padding-left: 3em;
+                    width: 25%;
+                }
+
+                &:last-child{
+                    text-align: left;
+                    padding-right: 2em;
+                    width: 3%;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        p{
+            line-height: 2;
+            padding-top: 1em;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+    }
+
+
+
+    @include responsive(MD){
+        .tab-pane{
+            table{
+                td{
+                    padding: .5em;
+                    &:first-child{
+                        padding-right: 1em;
+                        padding-left: 1em;
+                    }
+                    &:last-child{
+                        padding-right: 1em;
+                        padding-left: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(SM){
+        .tab-pane{
+            h2{
+                font-size: medium;
+            }
+
+            table{
+                font-size: small;
+                tr{
+
+                }
+
+                td{
+                    line-height: 1;
+                    padding: .5em;
+
+                    &:first-child{
+                        text-align: right;
+                        padding-right: 1em;
+                    }
+                    &:last-child{
+                        padding-right: 0;
+                        padding-left: 1em;
+                    }
+                }
+            }
+
+            p{
+                line-height: 1.5;
+                font-size: 1em;
+            }
+        }
+    }
+
+    @include responsive(XS){
+        .tab-pane{
+            h2{
+                font-size: medium;
+            }
+
+            table{
+                font-size: small;
+                tr{
+
+                }
+
+                td{
+                    line-height: 1;
+                    padding: .5em;
+
+                    &:first-child{
+                        text-align: right;
+                        padding-right: 1em;
+                    }
+                    &:last-child{
+                        padding-right: 0;
+                        padding-left: 1em;
+                    }
+                }
+            }
+
+            p{
+                line-height: 1.5;
+                font-size: 1em;
+            }
+        }
+    }
+}

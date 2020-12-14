@@ -10,9 +10,28 @@
         background: $color-light;
         color: $color-dark;
 
-        .print-left{
-            background-color: darken($color-light, 5%);
+        .print{
+            &-right{
+                .card{
+                    background: $color-light;
+                }
+            }
+            &-left{
+                background-color: darken($color-light, 5%);
+                .nav-tabs {
+                    .nav-link{
+                        background-color: darken($color-light, 5%);
+                        &:hover{
+                            background-color: $color-primary-light;
+                        }
+                    }
+                    .nav-link.active, .nav-item.show{
+                        background-color: $color-primary;
+                    }
+                }
+            }
         }
+
 
         .reservation{
             .content{
@@ -24,14 +43,37 @@
             padding-top: 3em;
             padding-bottom: 3em;
         }
+
+
     }
 
     &-foncer{
         background: $color-dark;
         color: $color-light;
-        .print-left{
-            background-color: lighten($color-dark, 5%);
+
+        .print{
+            &-right{
+                .card{
+                    background: $color-dark;
+                }
+            }
+            &-left{
+                background-color: lighten($color-dark, 5%);
+                .nav-tabs {
+                    .nav-link{
+                        background-color: lighten($color-dark, 5%);
+                        &:hover{
+                            background-color: $color-primary-light;
+                        }
+                    }
+                    .nav-link.active, .nav-item.show{
+                        background-color: $color-primary;
+                    }
+                }
+            }
+
         }
+
 
         .deco-title h1{
             text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
@@ -57,6 +99,7 @@
         }
 
         .card{
+            background: $color-dark;
             border-color: darken($color-light, 40%);
             &-title{
                 text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
@@ -66,6 +109,35 @@
             }
             &-price{
                 text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+            }
+        }
+
+        .nav-tabs {
+            text-shadow: 1px 0px 3px rgba(9, 9, 9, 0.9);
+            .nav-link {
+                border: 1px solid darken($color-grey, 10%);
+                color: darken($color-grey, 10%);
+                border-radius: 5px;
+            }
+            .nav-link.active,
+            .nav-item.show{
+                color: $color-light;
+            }
+
+            .nav-link{
+                &:hover{
+                    color: darken($color-light, 10%);
+                }
+            }
+        }
+        .tab-content{
+            .tab-pane{
+                table tr{
+                    border-bottom: 1px solid lighten($color-grey, 10%);
+                }
+                p{
+                    text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
+                }
             }
         }
 

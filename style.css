@@ -4909,6 +4909,43 @@ a {
 .title-section {
   letter-spacing: 3px; }
 
+.card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 1em;
+  background: inherit;
+  max-height: 230px;
+  min-height: 200px;
+  height: 100%;
+  margin-bottom: 4.5em; }
+  .card-img {
+    width: auto;
+    margin-top: .5em; }
+    .card-img .thumbnail {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px; }
+  .card-body {
+    padding: 0;
+    margin: 0 2em; }
+  .card-title {
+    font-family: "philosopher";
+    line-height: 1.45; }
+  .card-text {
+    text-align: justify;
+    font-size: smaller;
+    color: #4d4d4d;
+    margin-bottom: 1em; }
+  .card-price {
+    font-family: "philosopher";
+    color: #F5A623;
+    font-size: 1.5em;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 1em; }
+
 .navbar {
   font-family: "philosopher";
   letter-spacing: 1px;
@@ -4979,6 +5016,102 @@ a {
       content: "";
       position: absolute;
       height: 2px; }
+
+.nav-tabs {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none; }
+  .nav-tabs .nav-item {
+    width: 8.5em;
+    margin: 0 1em;
+    text-align: center; }
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show {
+    color: #fafafa;
+    border: none;
+    background-color: #F5A623;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  .nav-tabs .nav-link:hover {
+    color: #fafafa;
+    border: none;
+    background-color: #f7ba54;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  .nav-tabs .nav-link {
+    border: 1px solid #c4c4c4;
+    color: #919191;
+    border-radius: 5px; }
+  .nav-tabs p {
+    margin-bottom: 0; }
+
+.tab-content .show {
+  padding: 1em 0;
+  margin-top: 3em; }
+.tab-content > .active {
+  display: block;
+  width: 100%; }
+.tab-content .wp-block-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+.tab-content .tab-pane h2 {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  font-size: larger;
+  line-height: 2;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+  letter-spacing: 2px; }
+.tab-content .tab-pane table {
+  padding-bottom: 1.5em;
+  width: 75%; }
+  .tab-content .tab-pane table tr {
+    border-bottom: 1px solid #dedede;
+    line-height: 3; }
+    .tab-content .tab-pane table tr:last-child {
+      border: none; }
+  .tab-content .tab-pane table td {
+    padding: 0 .5em;
+    border: none;
+    border-collapse: collapse; }
+    .tab-content .tab-pane table td:first-child {
+      padding-left: 3em;
+      width: 25%; }
+    .tab-content .tab-pane table td:last-child {
+      text-align: left;
+      padding-right: 2em;
+      width: 3%;
+      letter-spacing: 2px; }
+.tab-content .tab-pane p {
+  line-height: 2;
+  padding-top: 1em;
+  text-align: center;
+  letter-spacing: 1px; }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .tab-content .tab-pane h2 {
+    font-size: medium; }
+  .tab-content .tab-pane table {
+    font-size: small; }
+    .tab-content .tab-pane table td {
+      line-height: 1;
+      padding: .5em; }
+      .tab-content .tab-pane table td:first-child {
+        text-align: right;
+        padding-right: 1em; }
+      .tab-content .tab-pane table td:last-child {
+        padding-right: 0;
+        padding-left: 1em; }
+  .tab-content .tab-pane p {
+    line-height: 1.5;
+    font-size: 1em; } }
 
 .scrollTop {
   background: #db8c0a;
@@ -5124,8 +5257,10 @@ a {
 
 .deco h1 {
   text-align: center;
-  padding-top: 3em;
+  padding-top: 2em;
   padding-bottom: .25em; }
+.deco .flip {
+  margin-bottom: 10%; }
 
 .suggestion h1 {
   margin-top: 0; }
@@ -5151,7 +5286,8 @@ a {
 .deco-section h1 {
   text-align: center;
   padding-top: 2em;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  padding-bottom: 2em; }
 .deco-section .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5163,21 +5299,27 @@ a {
 .print-right {
   background: url("assets/img/poose-feet-right.png") no-repeat fixed;
   background-size: contain;
-  background-position: top right;
-  height: 90vh; }
+  background-position: top right; }
 .print-left {
   background: url("assets/img/poose-feet-left.png") no-repeat fixed;
   background-size: contain;
-  background-position: top left;
-  height: 90vh; }
+  background-position: top left; }
   .print-left .description {
     margin-left: 20%; }
 
 .theme-clair {
   background: #fafafa;
   color: #333; }
+  .theme-clair .print-right .card {
+    background: #fafafa; }
   .theme-clair .print-left {
     background-color: #ededed; }
+    .theme-clair .print-left .nav-tabs .nav-link {
+      background-color: #ededed; }
+      .theme-clair .print-left .nav-tabs .nav-link:hover {
+        background-color: #f7ba54; }
+    .theme-clair .print-left .nav-tabs .nav-link.active, .theme-clair .print-left .nav-tabs .nav-item.show {
+      background-color: #F5A623; }
   .theme-clair .reservation .content {
     border: 1px solid #333; }
   .theme-clair .description {
@@ -5186,8 +5328,16 @@ a {
 .theme-foncer {
   background: #333;
   color: #fafafa; }
+  .theme-foncer .print-right .card {
+    background: #333; }
   .theme-foncer .print-left {
     background-color: #404040; }
+    .theme-foncer .print-left .nav-tabs .nav-link {
+      background-color: #404040; }
+      .theme-foncer .print-left .nav-tabs .nav-link:hover {
+        background-color: #f7ba54; }
+    .theme-foncer .print-left .nav-tabs .nav-link.active, .theme-foncer .print-left .nav-tabs .nav-item.show {
+      background-color: #F5A623; }
   .theme-foncer .deco-title h1 {
     text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
   .theme-foncer .reservation .content {
@@ -5200,6 +5350,7 @@ a {
   .theme-foncer .error-code {
     color: #fafafa; }
   .theme-foncer .card {
+    background: #333;
     border-color: #949494; }
     .theme-foncer .card-title {
       text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
@@ -5207,6 +5358,21 @@ a {
       color: #949494; }
     .theme-foncer .card-price {
       text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
+  .theme-foncer .nav-tabs {
+    text-shadow: 1px 0px 3px rgba(9, 9, 9, 0.9); }
+    .theme-foncer .nav-tabs .nav-link {
+      border: 1px solid #787878;
+      color: #787878;
+      border-radius: 5px; }
+    .theme-foncer .nav-tabs .nav-link.active,
+    .theme-foncer .nav-tabs .nav-item.show {
+      color: #fafafa; }
+    .theme-foncer .nav-tabs .nav-link:hover {
+      color: #e1e1e1; }
+  .theme-foncer .tab-content .tab-pane table tr {
+    border-bottom: 1px solid #ababab; }
+  .theme-foncer .tab-content .tab-pane p {
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
 
 .error {
   margin: 0 auto;
@@ -5398,41 +5564,15 @@ footer {
   -webkit-filter: invert(0.5);
   filter: invert(0.5); }
 
-.card {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 1em;
-  background: inherit;
-  max-height: 230px;
-  min-height: 200px;
-  height: 100%;
-  margin-bottom: 4.5em; }
-  .card-img {
-    width: auto;
-    margin-top: .5em; }
-    .card-img .thumbnail {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px; }
-  .card-body {
-    padding: 0;
-    margin: 0 2em; }
-  .card-title {
-    font-family: "philosopher";
-    line-height: 1.45; }
-  .card-text {
-    text-align: justify;
-    font-size: smaller;
-    color: #4d4d4d;
-    margin-bottom: 1em; }
-  .card-price {
-    font-family: "philosopher";
-    color: #F5A623;
-    font-size: 1.5em;
-    margin-bottom: 0;
-    position: absolute;
-    bottom: 1em; }
+.main-carts, .main-suggestion {
+  padding-bottom: 3em; }
+
+.else-display {
+  font-size: larger;
+  letter-spacing: 3px;
+  text-align: center; }
+
+.main-suggestion .else-display {
+  padding: 3em; }
 
 /*# sourceMappingURL=style.css.map */
