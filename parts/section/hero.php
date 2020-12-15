@@ -13,7 +13,7 @@
     <div class="hero" style="background-image: url(<?php echo get_option('image_hero') ?>)">
         <div class="filter">
             <?php if((checked(1, get_option('add_logo_hero'), false)) &&  (checked(1, get_option('add_message_hero'), false))): ?>
-                <div>
+                <div class="row">
                     <div class="col-lg-3 col-12">
                         <img src="<?php echo get_template_directory_uri().'/assets/img/mini-logo.png' ?>"
                              class="miniature"

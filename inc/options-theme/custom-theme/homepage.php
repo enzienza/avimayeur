@@ -41,6 +41,7 @@ class avimayeur_homepage{
     const SECTION_SUGGESTION  = 'section_suggestion';
     const SECTION_RESERVATION = 'section_reservation';
     const SECTION_CARTE       = 'section_carte';
+    const SECTION_EVENEMENT   = 'section_evenement';
 
     /**
      * 2 - DEFINIR LES HOOKS ACTIONS
@@ -277,6 +278,49 @@ class avimayeur_homepage{
         register_setting(self::SUB1_GROUP, 'message_carte');
         register_setting(self::SUB1_GROUP, 'maintext_carte');
 
+
+        /**
+         * SECTION 5 : SECTION_EVENEMENT ==============================
+         *             -> Créer la section
+         *             -> Ajouter les éléments du formulaire
+         *             -> Sauvegarder les champs
+         *
+         */
+        // -> créer la section
+        add_settings_section(
+            self::SECTION_EVENEMENT,                      // SLUG_SECTION
+            'Section événement',                          // TITLE
+            [self::class, 'display_section_evenement'],   // CALLBACK
+            self::SUB1_GROUP                          // SLUG_PAGE
+        );
+        // -> Ajouter les éléments du formulaire
+        add_settings_field(
+            'hidden_evenement',                     // SLUG_FIELD
+            'Cacher la section',                    // LABEL
+            [self::class,'field_hidden_evenement'], // CALLBACK
+            self::SUB1_GROUP,                       // SLUG_PAGE
+            self::SECTION_EVENEMENT                 // SLUG_SECTION
+        );
+        add_settings_field(
+            'title_evenement',                      // SLUG_FIELD
+            'Ajouter un titre',                     // LABEL
+            [self::class,'field_title_evenement'],  // CALLBACK
+            self::SUB1_GROUP,                       // SLUG_PAGE
+            self::SECTION_EVENEMENT                 // SLUG_SECTION
+        );
+        add_settings_field(
+            'message_evenement',                      // SLUG_FIELD
+            'Gestion d\'un message d\'introduction',  // LABEL
+            [self::class,'field_message_evenement'],  // CALLBACK
+            self::SUB1_GROUP,                         // SLUG_PAGE
+            self::SECTION_EVENEMENT                   // SLUG_SECTION
+        );
+
+        // -> Sauvegarder les champs
+        register_setting(self::SUB1_GROUP, 'hidden_evenement');
+        register_setting(self::SUB1_GROUP, 'title_evenement');
+        register_setting(self::SUB1_GROUP, 'add_message_evenement');
+        register_setting(self::SUB1_GROUP, 'message_evenement');
     }
 
     /**
@@ -314,7 +358,14 @@ class avimayeur_homepage{
             </p>
         <?php
     }
-
+    // DISPLAY SECTION 5 : SECTION_EVENEMENT ==============================
+    public static function display_section_evenement(){
+        ?>
+        <p class="section-description">
+            Cetter partie est dédié à la gestion des événements
+        </p>
+        <?php
+    }
     /**
      * 7 - DEFINIR LE TELECHARGEMENT DES FICHIER
      *     le fichier sera stocké dans le dossier upload
@@ -329,7 +380,6 @@ class avimayeur_homepage{
         //no upload. old file url is the new value.
         return get_option('image_hero');
     }
-
 
     /**
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
@@ -430,7 +480,6 @@ class avimayeur_homepage{
        </div>
        <?php
    }
-
    public static function field_ifnot_suggestion(){
        $ifnot_suggestion = esc_attr(get_option('ifnot_suggestion'));
         ?>
@@ -532,7 +581,6 @@ class avimayeur_homepage{
         </div>
         <?php
     }
-
     public static function field_maintext_carte(){
         $maintext_carte = esc_attr(get_option('maintext_carte'));
         ?>
@@ -548,6 +596,49 @@ class avimayeur_homepage{
         <?php
     }
 
+    // FIELD SECTION 5 : SECTION_EVENEMENT ==============================
+    public static function field_hidden_evenement(){
+        $hidden_evenement = esc_attr(get_option('hidden_evenement'));
+        ?>
+            <input type="checkbox"
+                   id="hidden_evenement"
+                   name="hidden_evenement"
+                   value="1"
+                   <?php checked(1, $hidden_evenement, true) ?>
+            />
+            <label for="">Masquer cette section de la page dédier aux cartes</label>
+        <?php
+    }
+    public static function field_title_evenement(){
+        $title_evenement = esc_attr(get_option('title_evenement'));
+        ?>
+            <input type="text"
+                   id="title_evenement"
+                   name="title_evenement"
+                   value="<?php echo $title_evenement ?>"
+                   class="large-text"
+            />
+        <?php
+    }
+    public static function field_message_evenement(){
+        $add_message_evenement = esc_attr(get_option('add_message_evenement'));
+        $message_evenement = esc_attr(get_option('message_evenement'));
+        ?>
+        <p class="description">
+            Ajouter un description à la section
+        </p>
+        <div class="height-space">
+            <input type="checkbox"
+                   id="add_message_evenement"
+                   name="add_message_evenement"
+                   value="1"
+                   <?php checked(1, $add_message_evenement, true); ?>
+            />
+            <label for="">Ajouter le texte souhaiter</label>
+            <textarea name="message_evenement" id="message_evenement" class="large-text code"><?php echo $message_evenement ?></textarea>
+        </div>
+        <?php
+    }
 
     /**
      * 9 - AJOUT STYLE ET SCRIPT

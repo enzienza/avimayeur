@@ -1,7 +1,9 @@
 <?php
 /**
  * Name file :   title-deco
- * Description : deco au titre ==> Le vol des oie
+ * Description : This file is displaying template part for
+ *               the "title-deco" theme
+ *               ==> Le vol des oie
  *
  * @package WordPress
  * @subpackage avimayeur
@@ -31,7 +33,7 @@
 
 <section id="carte" class="carte deco-title flying-right">
     <div class="container heaser-carte">
-        <?php get_template_part('parts/section/carte'); ?>
+        <?php get_template_part('parts/section/header-carte'); ?>
     </div><!--//header-carte-->
     <div class="container maint-cart">
         <!-- START FILTER -->
@@ -42,3 +44,15 @@
         <!-- END TAB-CONTENT -->
     </div><!--//tab-content-->
 </section><!--carte-->
+
+
+<?php if(checked(1, get_option('hidden_evenement'), false)): else: ?>
+    <section id="evenement" class="evenement deco-title flying-left">
+        <div class="container header-event">
+            <?php get_template_part('parts/section/header-event') ?>
+        </div><!--//header-event-->
+        <div class="container main-event">
+            <?php get_template_part('parts/posts/content') ?>
+        </div><!--//main-event-->
+    </section><!--//evenement-->
+<?php endif; ?>

@@ -30,7 +30,7 @@
 
 <section id="carte" class="carte deco-section print-left">
     <div class="container heaser-carte">
-        <?php get_template_part('parts/section/carte'); ?>
+        <?php get_template_part('parts/section/header-carte'); ?>
     </div><!--//header-carte-->
     <div class="container maint-cart">
         <!-- START FILTER -->
@@ -42,3 +42,13 @@
     </div><!--//tab-content-->
 </section><!--//carte-->
 
+<?php if(checked(1, get_option('hidden_evenement'), false)): else: ?>
+    <section id="evenement" class="evenement deco-section print-right">
+        <div class="container header-event">
+            <?php get_template_part('parts/section/header-event') ?>
+        </div><!--//header-event-->
+        <div class="container main-event">
+            <?php get_template_part('parts/posts/content') ?>
+        </div><!--//main-event-->
+    </section><!--//evenement-->
+<?php endif; ?>

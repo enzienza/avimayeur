@@ -94,23 +94,23 @@ class avimayeur_customtheme{
                     </td>
                 </tr>
 
-                <tr class="importer-item">
-                    <td class="import-system">
-                        <span class="importer-title">
-                          Page des événements
-                        </span>
-                        <span class="importer-action">
-                          <a href="?page=custom_eventpage" class="install-now">
-                            Gérer la page
-                          </a>
-                        </span>
-                    </td>
-                    <td class="desc">
-                        <span class="importer-desc">
-                          Lien pour gérer l'affichage de la page des événements
-                        </span>
-                    </td>
-                </tr>
+<!--                <tr class="importer-item">-->
+<!--                    <td class="import-system">-->
+<!--                        <span class="importer-title">-->
+<!--                          Page des événements-->
+<!--                        </span>-->
+<!--                        <span class="importer-action">-->
+<!--                          <a href="?page=custom_eventpage" class="install-now">-->
+<!--                            Gérer la page-->
+<!--                          </a>-->
+<!--                        </span>-->
+<!--                    </td>-->
+<!--                    <td class="desc">-->
+<!--                        <span class="importer-desc">-->
+<!--                          Lien pour gérer l'affichage de la page des événements-->
+<!--                        </span>-->
+<!--                    </td>-->
+<!--                </tr>-->
 
                 <tr class="importer-item">
                     <td class="import-system">
