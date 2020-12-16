@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file :   header-event
- * Description :
+ * Description : display the template part for the events section
  *
  * @package WordPress
  * @subpackage avimayeur

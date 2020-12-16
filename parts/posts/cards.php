@@ -1,7 +1,8 @@
 <?php
 /**
- * Name file :   card-suggestion
- * Description :
+ * Name file :   cards
+ * Description : display template part "cards" for suggestion section
+ *               ==> Each card is a suggestion
  *
  * @package WordPress
  * @subpackage avimayeur

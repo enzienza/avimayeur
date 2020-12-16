@@ -1,7 +1,9 @@
 <?php
 /**
- * Name file :   tabcontent-care
- * Description :
+ * Name file :   tab-content
+ * Description : Load the 'tab-content' part of the template on the pages
+ *               ==> this content is linked a 'nav-tabs'
+ *               ==> each tab-content for a carte
  *
  * @package WordPress
  * @subpackage avimayeur
@@ -16,17 +18,17 @@
         </p>
     </div>
     <?php
-    wp_reset_postdata();
+        wp_reset_postdata();
 
-    $args = array(
-        'post_type'      => 'cartes',
-        'posts_per_page' => -1,
-        'orderby'        => 'id',
-        'order'          => 'ASC'
-    );
-    $my_query = new WP_query($args);
-    if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
-        ?>
+        $args = array(
+            'post_type'      => 'cartes',
+            'posts_per_page' => -1,
+            'orderby'        => 'id',
+            'order'          => 'ASC'
+        );
+        $my_query = new WP_query($args);
+        if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+    ?>
         <div
             class="tab-pane fade container"
             id="<?php $title = sanitize_title(get_the_title()); echo $title;?>"

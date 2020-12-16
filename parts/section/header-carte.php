@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file :   carte
- * Description :
+ * Description : display the template part for the menu cards section
  *
  * @package WordPress
  * @subpackage avimayeur

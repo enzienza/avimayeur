@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file :   reservation
- * Description :
+ * Description : display template part for reservation section
  *
  * @package WordPress
  * @subpackage avimayeur

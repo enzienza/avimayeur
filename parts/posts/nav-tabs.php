@@ -1,7 +1,8 @@
 <?php
 /**
- * Name file :   navtabs-carte
- * Description :
+ * Name file :   nav-tabs
+ * Description : Loads 'nav-tabs' template-part on pages
+ *               ==> Each tabs is a cards
  *
  * @package WordPress
  * @subpackage avimayeur

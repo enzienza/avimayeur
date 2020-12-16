@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file :   suggestion
- * Description :
+ * Description : display the template part for suggestion section header
  *
  * @package WordPress
  * @subpackage avimayeur

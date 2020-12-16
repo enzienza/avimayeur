@@ -3,7 +3,7 @@
  * Name file :   title-deco
  * Description : This file is displaying template part for
  *               the "title-deco" theme
- *               ==> Le vol des oie
+ *               ==> Le vol des oies
  *
  * @package WordPress
  * @subpackage avimayeur

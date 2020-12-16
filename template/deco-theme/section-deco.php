@@ -1,7 +1,9 @@
 <?php
 /**
  * Name file :   section-deco
- * Description : deco à la section ==> Mes empreintes de pas de l'oie
+ * Description : This file is displaying template part for
+ *               the "title-deco" theme
+ *               ==> Les empreintes de pas de l'oie
  *
  * @package WordPress
  * @subpackage avimayeur

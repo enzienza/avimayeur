@@ -29,6 +29,7 @@ require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
 
 /* customize columns */
+require_once ('inc/customize/custom-column/column-suggestion.php');
 
 
 /* customize front-end */
