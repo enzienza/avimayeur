@@ -66,6 +66,6 @@
     .logo{
         width: 14em;
         height: auto;
-        @include filter(0.5);
+        @include filter-invert(0.5);
     }
 }

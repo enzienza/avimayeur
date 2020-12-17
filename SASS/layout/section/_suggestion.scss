@@ -1,23 +1,46 @@
 // main: ../section.scss
 
-.main-carts, .main-suggestion{
-    padding-bottom: 3em;
-}
+//.main-suggestion{
+//    .else-display{
+//        padding: 3em;
+//    }
+//}
+//
+//.main-event{
+//    .else-display{
+//        padding: 4em;
+//    }
+//}
 
-.else-display{
-    font-size: larger;
-    letter-spacing: 3px;
-    text-align: center;
-}
-
-.main-suggestion{
-    .else-display{
-        padding: 3em;
+@include responsive(MD){
+    .main-suggestion{
+        .col-12{
+            margin-bottom: 1em;
+        }
+        .else-display{
+            margin-bottom: 0;
+        }
     }
 }
 
-.main-event{
-    .else-display{
-        padding: 4em;
+@include responsive(SM){
+    .main-suggestion{
+        .col-12{
+            margin-bottom: 1em;
+        }
+        .else-display{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include responsive(XS){
+    .main-suggestion{
+        .col-12{
+            margin-bottom: 2em;
+        }
+        .else-display{
+            margin-bottom: 0;
+        }
     }
 }

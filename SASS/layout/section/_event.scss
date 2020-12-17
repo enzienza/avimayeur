@@ -1,0 +1,40 @@
+// main: ../section.scss
+
+.main-event {
+    .event-content{
+        margin-bottom: 2em;
+        &:last-child{
+            margin-bottom: 3em;
+        }
+    }
+    .wp-block-image{
+        text-align: center;
+        width: 100%;
+        img{
+            width: auto;
+            height: auto;
+            @include box-shadow(0 7px 10px -5px rgba(9, 9, 9, 0.9));
+        }
+    }
+}
+
+@include responsive(MD){
+    .wp-block-image img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@include responsive(SM){
+    .wp-block-image img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@include responsive(XS){
+    .wp-block-image img{
+        width: 100%;
+        height: auto;
+    }
+}

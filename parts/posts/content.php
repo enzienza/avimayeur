@@ -24,8 +24,8 @@
         if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
     ?>
     
-        <div class="col-12">
-            <h1><?php the_title() ?></h1>
+        <div class="col-12 event-content">
+<!--            <h1>--><?php //the_title() ?><!--</h1>-->
             <?php the_content() ?>
         </div>
 

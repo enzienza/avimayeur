@@ -32,24 +32,16 @@
             }
         }
 
-
-        .reservation{
-            .content{
-                border: 1px solid $color-dark;
-            }
-        }
-
-        .description{
-            padding-top: 3em;
-            padding-bottom: 3em;
-        }
-
-
     }
 
     &-foncer{
         background: $color-dark;
         color: $color-light;
+
+        .description{
+            color: darken($color-light, 20%);
+            text-shadow: 3px 2px 3px rgba(9, 9, 9, 0.8);
+        }
 
         .print{
             &-right{
@@ -74,24 +66,24 @@
 
         }
 
-
         .deco-title h1{
             text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
         }
 
         .reservation{
             .content{
-                border: 1px solid darken($color-light, 5%);
+                border-color: darken($color-light, 40%);
+            }
+            .miniature{
+                @include filter-invert(1);
+            }
+            .reserve-info{
+                text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
             }
         }
 
         .flying-left h1::after, .flying-right h1::before{
             filter: invert(0.5);
-        }
-
-        .description{
-            padding-top: 3em;
-            padding-bottom: 3em;
         }
 
         .error-code{

@@ -16,7 +16,7 @@
 
         $args = array(
             'post_type'      => 'suggestion',
-            'posts_per_page' => 4,
+            'posts_per_page' => -1,
             'orderby'        => 'id',
             'order'          => 'ASC',
             'meta_key'       => 'sticky',     // uniquement ceux qui on la mise en avant en 'oui'

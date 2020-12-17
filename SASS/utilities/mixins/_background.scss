@@ -24,13 +24,13 @@
 
 
 //Effet filtre degradé lineaire sur image
-@mixin filter-lineaire($direction, $debut, $fin) {
+@mixin linear-gradient($direction, $debut, $fin) {
     background-image: -webkit-linear-gradient($direction, $debut, $fin);
     background-image: -o-linear-gradient($direction, $debut, $fin);
     background-image: linear-gradient($direction, $debut, $fin);
 }
 
-@mixin filter-gradient($direction, $debut, $fin) {
+@mixin radial-gradient($direction, $debut, $fin) {
     background-image: -webkit-radial-gradient($direction, $debut, $fin);
     background-image: -o-radial-gradient($direction, $debut, $fin);
     background-image: radial-gradient($direction, $debut, $fin);

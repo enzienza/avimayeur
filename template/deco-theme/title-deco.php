@@ -32,7 +32,7 @@
 <?php endif; ?>
 
 <section id="carte" class="carte deco-title flying-right">
-    <div class="container heaser-carte">
+    <div class="container header-carte">
         <?php get_template_part('parts/section/header-carte'); ?>
     </div><!--//header-carte-->
     <div class="container maint-cart">

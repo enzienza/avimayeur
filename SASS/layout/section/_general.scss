@@ -1,0 +1,77 @@
+// main : ../section.scss
+
+// Cette feuille s'applique pour les 2 themes
+
+.header-section{
+    padding: 4em 0;
+
+    .title-section{
+        font-family: $font-secondary;
+    }
+}
+
+.description{
+    text-align: center;
+    font-size: larger;
+    padding: 1em 4em 4em;
+    font-family: $font-primary-light;
+    letter-spacing: 1px;
+}
+
+.else-display{
+    font-size: larger;
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 2;
+    padding: 2em;
+}
+
+
+
+@include responsive(MD){
+    .header-section{
+        padding: 4em 0;
+    }
+    .description{
+        padding: 0 2em 4em;
+        font-size: medium;
+    }
+}
+
+@include responsive(SM){
+    .header-section{
+        padding: 3em 0;
+        .title-section{
+            font-size: xx-large;
+        }
+    }
+    .description{
+        padding: 0 0 4em;
+        font-size: smaller;
+    }
+    .else-display{
+        padding: 2em;
+        line-height: 1.5;
+        font-size: 1em;
+    }
+}
+
+@include responsive(XS){
+    .header-section{
+        padding: 3em 2em;
+        .title-section{
+            font-size: xx-large;
+        }
+    }
+
+    .description{
+        font-size: smaller;
+        padding: 0 1em 4em;
+    }
+
+    .else-display{
+        padding: 2em;
+        line-height: 1.5;
+        font-size: 1em;
+    }
+}

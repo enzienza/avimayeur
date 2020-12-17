@@ -31,7 +31,7 @@
 <?php endif; ?>
 
 <section id="carte" class="carte deco-section print-left">
-    <div class="container heaser-carte">
+    <div class="container header-carte">
         <?php get_template_part('parts/section/header-carte'); ?>
     </div><!--//header-carte-->
     <div class="container maint-cart">

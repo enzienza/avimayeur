@@ -49,3 +49,82 @@
         bottom: 1em;
     }
 }
+
+@include responsive(MD){
+    .card{
+        max-height: 230px;
+        min-height: 150px;
+        margin-bottom: 15%;
+        &-img{
+            .thumbnail{
+                width: 120px;
+                height: 120px;
+            }
+        }
+        &-body{
+            margin: 0 2em;
+        }
+
+    }
+}
+
+@include responsive(SM){
+    .card{
+        max-height: 200px;
+        min-height: 150px;
+        margin-bottom: 15%;
+
+        &-img{
+            .thumbnail{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &-body{
+            margin: 0 1em 0 2em;
+        }
+
+        &-title{
+            font-size: x-large;
+        }
+
+        &-text{
+            font-size: small;
+        }
+
+        &-price{
+            bottom: .8em;
+        }
+    }
+}
+
+@include responsive(XS){
+    .card{
+        max-height: 250px;
+        min-height: 150px;
+        margin-bottom: 15%;
+
+        &-img{
+            .thumbnail{
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        &-body{
+            margin: 0;
+            padding: 0 1em;
+        }
+
+        &-title{
+            font-size: x-large;
+        }
+
+        &-text{
+            font-size: smaller;
+        }
+        &-price{
+            bottom: .8em;
+        }
+    }
+}
