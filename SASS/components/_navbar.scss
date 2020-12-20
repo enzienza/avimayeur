@@ -18,7 +18,7 @@
     .navbar-nav{
         .nav-link{
             &::before, &::after{
-                @include box-shadow(0 2px 2px rgba(255, 255, 255, 0.3));
+                @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.4));
             }
         }
     }
@@ -110,9 +110,9 @@
 @include responsive(MD){
     .navbar{
         height: auto;
+        background-color: lighten($color-dark, 3%);
         .navbar-collapse{
             padding-top: 1em;
-            background: rgba(8, 8, 8, .8);
         }
     }
     .solid{
@@ -129,9 +129,9 @@
 @include responsive(SM){
     .navbar{
         height: auto;
+        background-color: lighten($color-dark, 3%);
         .navbar-collapse{
             padding-top: 1em;
-            background: rgba(8, 8, 8, .8);
         }
     }
     .solid{
@@ -148,9 +148,9 @@
 @include responsive(XS){
     .navbar{
         height: auto;
+        background-color: lighten($color-dark, 3%);
         .navbar-collapse{
             padding-top: 1em;
-            background: rgba(8, 8, 8, .8);
         }
     }
     .solid{

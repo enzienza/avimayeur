@@ -9,9 +9,20 @@
  */
 ?>
 
-<section class="info">
-    <?php get_template_part('parts/footer/info'); ?>
-</section>
+
+
+
+
+<?php if(checked(1, get_option('color_theme'), false)): ?>
+    <section class="info">
+        <?php get_template_part('parts/footer/info'); ?>
+    </section>
+<?php elseif (checked(2, get_option('color_theme'), false)): ?>
+    <section class="info info-foncer">
+        <?php get_template_part('parts/footer/info'); ?>
+    </section>
+<?php endif; ?>
+
 
 <a href="#" class="scrollTop">
     <svg width="18px" height="18px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -20,25 +31,45 @@
     </svg>
 </a>
 
-<footer class="footer text-center">
-    <div class="container">
+<?php if(checked(1, get_option('color_theme'), false)): ?>
+    <footer class="footer text-center">
+        <div class="container">
 
-        <small class="copyright">
-            <div class="float-left">
-                <a href="http://localhost:8888/projet_2020/diden/wordpress/politique-de-confidentialite/" class="">Privacy Policy</a>
-            </div>
+            <small class="copyright">
+                <div class="float-left">
+                    <a href="http://localhost:8888/projet_2020/diden/wordpress/politique-de-confidentialite/" class="">Privacy Policy</a>
+                </div>
 
-            <div class="float-right">
-                © <?php bloginfo('name')?> 2020.
-                All Rights Reserved.
-                Designed by
-                <a href="http://enzalombardo.be/" target="_blank">Enza Lombardo</a>.
-            </div>
-        </small>
+                <div class="float-right">
+                    © <?php bloginfo('name')?> 2020.
+                    All Rights Reserved.
+                    Designed by
+                    <a href="http://enzalombardo.be/" target="_blank">Enza Lombardo</a>.
+                </div>
+            </small>
 
-    </div><!--//container-->
-</footer><!--//footer-->
+        </div><!--//container-->
+    </footer><!--//footer-->
+<?php elseif (checked(2, get_option('color_theme'), false)): ?>
+    <footer class="footer footer-foncer text-center">
+        <div class="container">
 
+            <small class="copyright">
+                <div class="float-left">
+                    <a href="http://localhost:8888/projet_2020/diden/wordpress/politique-de-confidentialite/" class="">Privacy Policy</a>
+                </div>
+
+                <div class="float-right">
+                    © <?php bloginfo('name')?> 2020.
+                    All Rights Reserved.
+                    Designed by
+                    <a href="http://enzalombardo.be/" target="_blank">Enza Lombardo</a>.
+                </div>
+            </small>
+
+        </div><!--//container-->
+    </footer><!--//footer-->
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 </body>

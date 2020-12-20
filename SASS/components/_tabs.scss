@@ -132,6 +132,9 @@
         .tab-pane{
 
             table{
+                tr{
+                    line-height: inherit;
+                }
                 td{
                     padding: .5em;
                     &:first-child{
@@ -166,7 +169,7 @@
 
                 td{
                     line-height: 1;
-                    padding: .5em;
+                    padding: .7em;
 
                     &:first-child{
                         padding-left: 1em;
@@ -206,7 +209,7 @@
 
                 td{
                     line-height: 1;
-                    padding: .5em;
+                    padding: .7em;
 
                     &:first-child{
                         padding-left: 1em;

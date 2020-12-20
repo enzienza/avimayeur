@@ -69,3 +69,33 @@
         @include filter-invert(0.5);
     }
 }
+
+.info-foncer, .footer-foncer{
+    background-color: darken($color-dark, 5%);
+}
+
+@include responsive(MD) {
+
+}
+
+@include responsive(SM){
+    .block-logo{
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+    .block-horaire{
+        @include flex;
+        @include justify-content(center);
+    }
+}
+@include responsive(XS){
+    .block-logo{
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .block-horaire{
+        @include flex;
+        @include justify-content(center);
+    }
+}

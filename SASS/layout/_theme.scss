@@ -10,6 +10,11 @@
         background: $color-light;
         color: $color-dark;
 
+        // START : GENERAL  (pour les 3 deco) ===================
+
+        // START : TITLE-DECO (deco-1) ==========================
+
+        // START : SECTION-DECO (deco-2) ========================
         .print{
             &-right{
                 .card{
@@ -29,8 +34,41 @@
                         background-color: $color-primary;
                     }
                 }
+
+                .tab-content{
+                    .else-display{
+                        background-color: darken($color-light, 5%);
+                        margin: auto 10%;
+                    }
+                    table{
+                        background-color: darken($color-light, 5%);
+                    }
+
+                    @include responsive(MD){
+                        background-color: darken($color-light, 5%);
+                        .else-display{
+                            margin: auto;
+                        }
+                    }
+                    @include responsive(SM){
+                        background-color: darken($color-light, 5%);
+                        .else-display{
+                            margin: auto;
+                        }
+                    }
+                    @include responsive(XS){
+                        background-color: darken($color-light, 5%);
+                        .else-display{
+                            margin: auto;
+                        }
+                    }
+                }
             }
         }
+
+        // START : NO-DECO (deco-3) =============================
+
+
 
     }
 
@@ -38,38 +76,11 @@
         background: $color-dark;
         color: $color-light;
 
+        // START : GENERAL  (pour les 3 deco) ===================
         .description{
             color: darken($color-light, 20%);
             text-shadow: 3px 2px 3px rgba(9, 9, 9, 0.8);
         }
-
-        .print{
-            &-right{
-                .card{
-                    background: $color-dark;
-                }
-            }
-            &-left{
-                background-color: lighten($color-dark, 5%);
-                .nav-tabs {
-                    .nav-link{
-                        background-color: lighten($color-dark, 5%);
-                        &:hover{
-                            background-color: $color-primary-light;
-                        }
-                    }
-                    .nav-link.active, .nav-item.show{
-                        background-color: $color-primary;
-                    }
-                }
-            }
-
-        }
-
-        .deco-title h1{
-            text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
-        }
-
         .reservation{
             .content{
                 border-color: darken($color-light, 40%);
@@ -81,15 +92,9 @@
                 text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
             }
         }
-
-        .flying-left h1::after, .flying-right h1::before{
-            filter: invert(0.5);
-        }
-
         .error-code{
             color: $color-light;
         }
-
         .card{
             background: $color-dark;
             border-color: darken($color-light, 40%);
@@ -122,6 +127,7 @@
                 }
             }
         }
+
         .tab-content{
             .tab-pane{
                 table tr{
@@ -134,7 +140,73 @@
         }
 
 
+        // START : TITLE-DECO (deco-1) ==========================
+        .deco-title h1{
+            text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+        }
+
+        .flying-left h1::after, .flying-right h1::before{
+            filter: invert(0.5);
+        }
+
+
+        // START : SECTION-DECO (deco-2) ========================
+        .print{
+            &-right{
+                .card{
+                    background: $color-dark;
+                }
+            }
+            &-left{
+                background-color: lighten($color-dark, 5%);
+                .nav-tabs {
+                    .nav-link{
+                        background-color: lighten($color-dark, 5%);
+                        &:hover{
+                            background-color: $color-primary-light;
+                        }
+                    }
+                    .nav-link.active, .nav-item.show{
+                        background-color: $color-primary;
+                    }
+                }
+                .tab-content{
+                    .else-display{
+                        background-color: lighten($color-dark, 5%);
+                        margin: auto 10%;
+                    }
+                    table{
+                        background-color: lighten($color-dark, 5%);
+                    }
+
+                    @include responsive(MD){
+                        background-color: lighten($color-dark, 5%);
+                        .else-display{
+                            margin: auto;
+                        }
+                    }
+                    @include responsive(SM){
+                        background-color: lighten($color-dark, 5%);
+                        .else-display{
+                            margin: auto;
+                        }
+                    }
+                    @include responsive(XS){
+                        background-color: lighten($color-dark, 5%);
+                        .else-display{
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        // START : NO-DECO (deco-3) =============================
+
     }
+
 }
+
+
 
 

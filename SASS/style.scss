@@ -17,6 +17,7 @@ Tags:
 
 // UTILITIES ----------------------------
 @import 'utilities/mixins';
+@import 'utilities/animations';
 @import 'utilities/variables';
 
 
@@ -34,16 +35,10 @@ Tags:
 
 
 // ELEMENTS -----------------------------
-//@import 'elements/box';
-//@import 'elements/button';
-//@import 'elements/icon';
 @import 'elements/table';
 @import 'elements/flip';
 
 // FORM ---------------------------------
-//@import 'form/checked';
-//@import 'form/text';
-//@import 'form/select';
 
 
 // LAYOUT -------------------------------

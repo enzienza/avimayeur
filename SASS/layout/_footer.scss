@@ -17,29 +17,24 @@ footer {
             color: $color-primary-light;
         }
     }
-}
+    @include responsive(MD) {
 
+    }
 
-@include responsive(MD) {
-    .footer-info {
-        // block location
-        .logo {
-            width: 50px;
+    @include responsive(SM){
+        padding: 1em 4em;
+        line-height: inherit;
+        height: calc(3em * 2);
+        .float-left, .float-right{
+            float: inherit !important;
         }
-
-        .blog-address {
-            margin-left: 1.2em;
-            font-size: .9em;
+    }
+    @include responsive(XS){
+        padding: 1em 4em;
+        line-height: inherit;
+        height: calc(3em * 2);
+        .float-left, .flying-right{
+            float: inherit !important;
         }
-
-        .title {
-            font-size: 1.3em;
-        }
-
-        // block link
-        .navbar-nav {
-            margin-left: 4em;
-        }
-
     }
 }

@@ -18,7 +18,7 @@
             if ($(this).is('[href*="#"')) {
                 $(this).parent().removeClass('current-menu-item current-menu-ancestor');
                 $(this).click(function () {
-                    var current_index = $(this).parent().index(),
+                    var current_index  = $(this).parent().index(),
                         parent_element = $(this).closest('ul');
                     parent_element.find('li').not(':eq(' + current_index + ')').removeClass('current-menu-item current-menu-ancestor');
                     $(this).parent().addClass('current-menu-item current-menu-ancestor');

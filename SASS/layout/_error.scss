@@ -41,11 +41,13 @@
     }
 
     @include responsive(MD){
-
+        padding-top: 10%;
+        padding-bottom: 3em;
     }
 
     @include responsive(SM){
-        margin-top: 2em !important;
+        padding-top: 10%;
+        padding-bottom: 3em;
 
         .text-hightlight{
             padding-bottom: .5em;
@@ -61,7 +63,8 @@
     }
 
     @include responsive(XS){
-        margin-top: 1em !important;
+        padding-top: 10%;
+        padding-bottom: 3em;
 
         .text-hightlight{
             padding-bottom: .5em;

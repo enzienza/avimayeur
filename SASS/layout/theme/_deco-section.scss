@@ -3,35 +3,138 @@
 .deco-section{
     h1{
         text-align: center;
-        padding-top: 2em;
         letter-spacing: 2px;
-        padding-bottom: 2em;
+        padding-top: 1em;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     .description{
         @include flex;
-        margin-top: 3em;
-        width: 80%;
         text-align: justify;
+        width: 80%;
+        margin-top: 0;
+        padding-top: 2em;
+    }
+
+    .else-display{
+        padding-bottom: 3em;
+    }
+
+    .main-event{
+        padding-top: 2em;
     }
 }
 
+
 .print{
     &-right{
-        background: url('assets/img/poose-feet-right.png') no-repeat fixed;
-        background-size: contain;
-        background-position: top right;
-        //height: 90vh;
+        position: relative;
+        display: block;
+        z-index: 1;
 
+        &::after {
+            background: url('./assets/img/poose-feet-right.png') no-repeat fixed;
+            background-size: contain;
+            background-position: top right;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .description{
+            padding-bottom: 3em;
+        }
     }
 
     &-left{
-        background: url('assets/img/poose-feet-left.png') no-repeat fixed;
-        background-size: contain;
-        background-position: top left;
-        //height: 90vh;
+        position: relative;
+        display: block;
+        z-index: 1;
+
+        &::after{
+            background: url('./assets/img/poose-feet-left.png') no-repeat fixed;
+            background-size: contain;
+            background-position: top left;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
         .description{
             margin-left: 20%;
+            padding-top: 0;
+            padding-bottom: 4em;
+        }
+    }
+}
+
+@include responsive(MD){
+    .deco-section{
+        .description{
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+    .print-left::after, .print-right::after{
+        opacity: 0.1;
+    }
+    .print{
+        &-left{
+            .description{
+                margin-left: 0;
+            }
+        }
+    }
+}
+@include responsive(SM){
+    .deco-section{
+        .description{
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    .print-left::after, .print-right::after{
+        opacity: 0.1;
+    }
+
+    .print{
+        &-left{
+            .description{
+                margin-left: 0;
+            }
+        }
+    }
+}
+@include responsive(XS){
+    .deco-section{
+        .description{
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    .print-left::after, .print-right::after{
+        opacity: 0.1;
+    }
+    .print{
+        &-left{
+            .description{
+                margin-left: 0;
+            }
         }
     }
 }
