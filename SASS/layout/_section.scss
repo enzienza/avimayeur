@@ -6,3 +6,12 @@
 @import "section/suggestion";
 @import "section/event";
 @import "section/general";
+
+.content-page{
+    padding: 4em 1em;
+    text-align: justify;
+
+    h2, h3{
+        padding: .5em 0;
+    }
+}

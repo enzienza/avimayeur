@@ -16,6 +16,10 @@
             @include box-shadow(0 7px 10px -5px rgba(9, 9, 9, 0.9));
         }
     }
+
+    .else-display{
+        width: 100%;
+    }
 }
 
 @include responsive(MD){

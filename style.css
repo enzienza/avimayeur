@@ -6210,6 +6210,8 @@ footer {
     height: auto;
     -webkit-box-shadow: 0 7px 10px -5px rgba(9, 9, 9, 0.9);
     box-shadow: 0 7px 10px -5px rgba(9, 9, 9, 0.9); }
+.main-event .else-display {
+  width: 100%; }
 
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
   .wp-block-image img {
@@ -6279,5 +6281,10 @@ footer {
     padding: 2em;
     line-height: 1.5;
     font-size: 1em; } }
+.content-page {
+  padding: 4em 1em;
+  text-align: justify; }
+  .content-page h2, .content-page h3 {
+    padding: .5em 0; }
 
 /*# sourceMappingURL=style.css.map */
