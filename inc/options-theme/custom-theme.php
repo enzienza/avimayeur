@@ -219,6 +219,7 @@ class avimayeur_customtheme{
                 <?php checked(1, $color_theme, true); ?>
             />
             <label for="">Thème claire</label>
+        <div class="box-color theme-clair"></div>
         </p>
         <p>
             <input type="radio"
@@ -228,6 +229,7 @@ class avimayeur_customtheme{
                 <?php checked(2, $color_theme, true); ?>
             />
             <label for="">Thème foncer</label>
+            <div class="box-color theme-foncer"></div>
         </p>
         <?php
     }
@@ -240,33 +242,37 @@ class avimayeur_customtheme{
                    id="title_deco"
                    name="deco_theme"
                    value="1"
-                <?php checked(1, $deco_theme, true); ?>
+                   <?php checked(1, $deco_theme, true); ?>
             />
             <label for="">
                 Ajouter la déco au titre
                 <span class="desc">(Le vol des oies)</span>
             </label>
+<!--            <div class="box-deco"><img src="../img/flying-right.png" alt=""></div>-->
+            <div class="box-deco flying"></div>
         </p>
         <p>
             <input type="radio"
                    id="section_deco"
                    name="deco_theme"
                    value="2"
-                <?php checked(2, $deco_theme, true); ?>
+                   <?php checked(2, $deco_theme, true); ?>
             />
             <label for="">
                 Ajouter la déco à la section
                 <span class="desc">(Les empreintes de pas d'oie)</span>
             </label>
+            <div class="box-deco print"></div>
         </p>
         <p>
             <input type="radio"
                    id="no_deco"
                    name="deco_theme"
                    value="3"
-                <?php checked(3, $deco_theme, true);?>
+                   <?php checked(3, $deco_theme, true);?>
             />
             <label for="">Pas de décoration</label>
+            <div class="box-deco flip"></div>
         </p>
         <?php
     }

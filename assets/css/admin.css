@@ -233,6 +233,45 @@ td .service:first-child{
     padding: .5em 0;
 }
 
+
+.box-color{
+    width: 150px;
+    height: 3em;
+    border: 1px solid #cecece;
+}
+
+.theme-clair{
+    background-color: #fafafa;
+}
+
+.theme-foncer{
+    background-color: #333333;
+}
+
+.box-deco{
+    width: 200px;
+    height: 3em;
+    margin-top: 1em;
+}
+
+.flying{
+    background: url('../img/flying-left.png') no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.print{
+    background: url('../img/poose-feet-left.png') no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.flip{
+    background: url('../img/flip.png') no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
 /* ==============================================
  *      7 - Style for the form-customtheme
  */
