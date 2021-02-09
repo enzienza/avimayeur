@@ -5963,7 +5963,8 @@ footer {
   align-items: center;
   text-align: center;
   font-size: 2em;
-  color: #fafafa; }
+  color: #fafafa;
+  text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
 .jumb-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5979,7 +5980,8 @@ footer {
     -webkit-filter: invert(1);
     filter: invert(1); }
   .jumb-title .msg-hero {
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
 
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
   .jumb-hero .logo {
